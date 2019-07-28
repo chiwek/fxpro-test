@@ -4,8 +4,8 @@
 
 export const environment = {
     production: false,
-    apiUrl: 'http://promens.codebliss.biz/api',
-    baseUrl: 'http://promens.codebliss.biz/v2',
+    apiUrl: 'http://fxpro.codebliss.biz/api',
+    baseUrl: 'http://fxpro.codebliss.biz/v1',
     envName:'local'
 };
 
