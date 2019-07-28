@@ -1,0 +1,18 @@
+// Import the main scss file here only!
+
+@import "app/scss/main";
+
+// todo: temp styling, delete after!!!
+app-template-login {
+  display: flex;
+  flex-direction: column;
+
+  & input {
+    background-color: silver;
+  }
+
+  & button {
+    background-color: blue;
+  }
+
+}

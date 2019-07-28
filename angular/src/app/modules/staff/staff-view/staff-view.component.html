@@ -1,0 +1,104 @@
+<div class="c-page" *ngIf="item">
+
+    <div class="c-page c-page--details">
+
+        <div class="c-page__header">
+
+            <div class="c-page__header-title">{{item.firstname}} {{item.lastname}}</div>
+
+            <div class="c-page__header-item h-buttonize" title="Edit"
+				 [inlineSVG]="'/assets/svg/font_awesome/edit-solid.svg'" (click)="showForm(item.id)"></div>
+
+            <div class="c-page__header-item h-buttonize" title="Go back to the list"
+				 [inlineSVG]="'/assets/svg/font_awesome/times-solid.svg'" (click)="backToList()"></div>
+
+        </div>
+
+        <div class="c-page__content">
+
+            <div class="c-frm">
+
+
+
+                <div class="c-frm__section c-frm__section--display-only-horizontal">
+
+                    <div class="c-frm__section-title">GENERAL</div>
+
+                    <div class="c-frm__cell">
+                        <div class="c-frm__display-label">EDU CENTER:</div>
+                        <div class="c-frm__display-txt">{{item.franchise.name}}</div>
+                    </div>
+
+                    <div class="c-frm__cell">
+                        <div class="c-frm__display-label">USER TYPE:</div>
+                        <div class="c-frm__display-txt">{{item.role.name}}</div>
+                    </div>
+
+                </div>
+
+                <div class="c-frm__section c-frm__section--display-only-horizontal">
+
+                    <div class="c-frm__section-title">USER INFO</div>
+
+                    <div class="c-frm__cell">
+                        <div class="c-frm__display-label">USERNAME:</div>
+                        <div class="c-frm__display-txt">{{item.username}}</div>
+                    </div>
+
+                    <div class="c-frm__cell">
+                        <div class="c-frm__display-label">FIRSTNAME:</div>
+                        <div class="c-frm__display-txt">{{item.firstname}}</div>
+                    </div>
+
+                    <div class="c-frm__cell">
+                        <div class="c-frm__display-label">LASTNAME:</div>
+                        <div class="c-frm__display-txt">{{item.lastname}}</div>
+                    </div>
+
+                    <div class="c-frm__cell">
+                        <div class="c-frm__display-label">NOTE</div>
+                        <div class="c-frm__display-txt">{{item.note}}</div>
+                    </div>
+
+                </div>
+
+                <div class="c-frm__section c-frm__section--display-only-horizontal">
+
+                    <div class="c-frm__section-title">CONTACT</div>
+
+                    <div class="c-frm__cell">
+                        <div class="c-frm__display-label">EMAIL:</div>
+                        <div class="c-frm__display-txt">{{item.email}}</div>
+                    </div>
+
+                    <div class="c-frm__cell">
+                        <div class="c-frm__display-label">MOBILE:</div>
+                        <div class="c-frm__display-txt">{{item.cellphone}}</div>
+                    </div>
+
+                    <div class="c-frm__cell">
+                        <div class="c-frm__display-label">PHONE:</div>
+                        <div class="c-frm__display-txt">{{item.phone}}</div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="c-frm__section c-frm__section--display-only-horizontal" *ngIf="item.qualification">
+
+                    <div class="c-frm__section-title">ASSIGNMENTS</div>
+
+                    <div class="c-frm__cell">
+                        <div class="c-frm__display-label">STATUS:</div>
+                        <div class="c-frm__display-txt" [ngClass]="{ 'h-color-alert': false, 'h-color-success': true }">
+                            {{item.is_active ? "Active" : "Inactive"}}
+                        </div>
+                    </div>
+
+
+        </div>
+
+    </div>
+
+</div>

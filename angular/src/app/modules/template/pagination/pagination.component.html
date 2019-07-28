@@ -1,0 +1,41 @@
+<div class="c-list__pagination">
+
+	<div class="c-list__pagination-pages">
+
+		<!-- Goto first page -->
+		<button class="c-list__pagination-pages-item" *ngIf="opts.current_page > totalLinks"
+				[inlineSVG]="'/assets/svg/basic/left_double_26.svg'"></button>
+
+		<!-- Previous page -->
+		<button class="c-list__pagination-pages-item"
+				[inlineSVG]="'/assets/svg/basic/left_26.svg'" *ngIf="opts.current_page > 1"
+				(click)="prevPage()"></button>
+
+		<button class="c-list__pagination-pages-item"
+				[class.is-active]="item == opts.current_page"
+				*ngFor="let item of createRange()"
+				(click)="goToPage(item)">{{item}}
+		</button>
+
+		<!-- Next page -->
+		<button class="c-list__pagination-pages-item"
+				[inlineSVG]="'/assets/svg/basic/right_26.svg'" *ngIf="opts.current_page < opts.last_page"
+				(click)="nextPage()"></button>
+
+		<!-- Goto last page -->
+		<button class="c-list__pagination-pages-item" *ngIf="opts.current_page < opts.last_page"
+				[inlineSVG]="'/assets/svg/basic/right_double_26.svg'"></button>
+
+	</div>
+
+	<div class="c-list__pagination-per_page">
+		Show on page:
+		<span class="c-list-pagination-per_page-item" [class.is-on]="opts.per_page == 25"
+			  (click)="changePerPage(25)">25</span>
+		<span class="c-list-pagination-per_page-item" [class.is-on]="opts.per_page == 50"
+			  (click)="changePerPage(50)">50</span>
+		<span class="c-list-pagination-per_page-item" [class.is-on]="opts.per_page == 100"
+			  (click)="changePerPage(100)">100</span>
+	</div>
+
+</div>

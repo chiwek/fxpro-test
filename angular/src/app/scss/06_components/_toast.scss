@@ -1,0 +1,34 @@
+// Toasts specific elements
+// =====================================================================================================================
+
+.c-toast {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 5rem;
+  align-items: center;
+  font-size: $font-size_small;
+  background-color: $color_orange_50;
+  border: 1px solid $color_orange_500;
+  box-shadow: 0 0 5px -2px silver;
+}
+
+.l-toast-icon {
+  width: auto;
+  height: 100%;
+  padding-left: 0.5rem;
+
+  & svg {
+    width: $svg_medium;
+    height: $svg_medium;
+  }
+
+}
+
+.l-toast-message {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+// =====================================================================================================================
+// Media queries

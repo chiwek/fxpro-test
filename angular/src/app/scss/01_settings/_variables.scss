@@ -1,0 +1,72 @@
+// Define the main variables/switches
+// =====================================================================================================================
+
+// Switches
+$switch_wireframe_on: true;
+$switch_animations_on: true;
+
+// Breakpoints
+$breakpoint_x_sidebar_collapse: 1023px;
+$breakpoint_x_title_collapse: 450px;
+$breakpoint_x_footer_sidebox_collapse: 1023px;
+$breakpoint_x_footer_misc_collapse: 991px;
+$breakpoint_x_messages_collapse: 1024px;
+$breakpoint_x_messages_spread: 768px;
+
+// Dimensions
+$dimension_rem_base: 14px;
+$dimension_header_height: 4rem;
+$dimension_footer_height: 2.5rem;
+$dimension_sidebar_width: $dimension_header_height * 4;
+$dimension_sidebar_item_height: 3rem;
+
+// Svg sizes
+$svg_small: 17px;
+$svg_medium: 2rem;
+$svg_large: 2.5rem;
+
+// Typography
+$font_type_default: $font_1;
+$font_type_mono: $font_2;
+$font_type_special_1: $font_1;
+
+$font_size_default: 1rem;
+$font_size_x_large: 1.5rem;
+$font_size_large: 1.1rem;
+$font_size_small: 0.9rem;
+$font_size_smaller: 0.8rem;
+
+$font_color_dark: $color_gray_900;
+$font_color_default: $color_gray_800;
+$font_color_light: $color_gray_500;
+$font_color_lighter: $color_gray_300;
+
+// Colors
+$color_app_bgr: $color-white;
+
+$color_scrollbar_track: $color_gray_100;
+$color_scrollbar_thumb: $color_gray_300;
+
+$color_background_header: $color-white;
+$color_background_header_hover: $color-white;
+$color_background_header_sidebox: $color_deep_purple_500;
+$color_background_sidebar: $color_deep_purple_400;
+$color_background_page_head: $color-white;
+$color_background_page_body: $color-white;
+$color_background_list_button: $color_orange_400;
+
+$color_icons_header: $color_gray_700;
+$color_icons_header_hover: $color_blue_gray_500;
+
+$color_border_header: $color_gray_500;
+$color_border_sidebar: $color_gray_700;
+$color_border_list: $color_gray_500;
+$color_border_actionbar_buttons: $color_gray_300;
+$color_border_actionbar_buttons_active: $color_orange_A200;
+
+$color_alert: $color_pink_500;
+$color_success: $color_green_400;
+
+// Shadows
+
+$shadow_layout_elements: 0 0 0px -0px silver;

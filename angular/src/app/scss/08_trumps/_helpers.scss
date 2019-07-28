@@ -1,0 +1,120 @@
+// Helper classes / modifiers
+// Work as addition to regular classes
+// =====================================================================================================================
+
+.h-auto_width {
+  width: auto !important;
+}
+
+.h-auto_height {
+  height: auto !important;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+
+.h-flex_auto_margin--left {
+  margin-left: auto !important;
+}
+
+.h-flex_auto_margin--right {
+  margin-right: auto !important;
+}
+
+.h-flex_auto_margin--top {
+  margin-top: auto !important;
+}
+
+.h-flex_auto_margin--bottom {
+  margin-bottom: auto !important;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+
+.h-flex_center_content {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.h-flex_row_align--left {
+  justify-content: flex-start;
+}
+
+.h-flex_row_align--right {
+  justify-content: flex-end;
+}
+
+.h-flex_row_align--top {
+  align-items: flex-start;
+}
+
+.h-flex_row_align--bottom {
+  align-items: flex-end;
+}
+
+.h-flex_col_align--left {
+  align-items: flex-start;
+}
+
+.h-flex_col_align--right {
+  align-items: flex-end;
+}
+
+.h-flex_col_align--top {
+  justify-content: flex-start;
+}
+
+.h-flex_col_align--bottom {
+  justify-content: flex-end;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+
+.h-buttonize::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  cursor: pointer;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+
+.h-spinner {
+  animation-name: animation-spinner;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+
+.h-text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.h-text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.h-text-uppercase {
+  text-transform: uppercase !important;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+
+.h-color-alert {
+  color: $color_alert;
+}
+
+.h-color-success {
+  color: $color_success;
+}
+
+.h-color-accent-1 {
+  color: $color_orange_A400;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------

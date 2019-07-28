@@ -1,0 +1,389 @@
+.c-frm {
+  width: 100%;
+  padding-bottom: 2rem;
+  overflow: visible;
+
+  & > * + * {
+    margin-top: 4rem;
+  }
+
+  & > input[type='hidden'] + * {
+    margin-top: 0;
+  }
+
+  //border: 1px solid red;
+
+}
+
+// used as a ngFor wrapper when multiple sections are generated depending on a single parameter...
+// see invoices-form.component.html "New invoices sections"
+.c-frm__wrap-section {
+  width: 100%;
+}
+
+.c-frm__section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr) );
+  grid-template-rows: 3rem;
+  grid-auto-rows: 3rem;
+  grid-gap: 2rem;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+  background-color: $color_white;
+  border-top: 1px solid $color_gray_300;
+  border-bottom: 1px dashed $color_gray_200;
+}
+
+// View details variation of the section
+.c-frm__section--display-only-horizontal {
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  grid-gap: 1rem 2rem;
+  padding: 2rem;
+}
+
+// View details variation of the section; Vertiacal stack;
+.c-frm__section--display-only-vertical {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+}
+
+.c-frm__section-title {
+  display: inline-flex;
+  position: absolute;
+  bottom: 100%; left: 0;
+  transform: translateX(-1px);
+  width: auto;
+  min-width: 4rem;
+  height: 2rem;
+  padding: 0 1rem;
+  justify-content: center;
+  align-items: center;
+  font-size: $font_size_smaller;
+  font-weight: bold;
+  background-color: $color_indigo_50;
+  border: 1px solid $color_gray_300;
+  border-bottom: none;
+}
+
+.c-frm__section-title--success {
+  background-color: $color_green_200;
+}
+
+.c-frm__section-title--accent {
+  background-color: $color_orange_200;
+}
+
+.c-frm__section-title--alert {
+  background-color: $color_red_200;
+}
+
+// On the bottom; add, remove section...
+.c-frm__section-box-controls {
+  display: inline-flex;
+  position: absolute;
+  top: 100%; right: 0;
+  transform: translateX(-1px);
+  width: auto;
+  min-width: 4rem;
+  height: 2rem;
+  padding: 0 1rem;
+  justify-content: center;
+  align-items: center;
+  font-size: $font_size_smaller;
+  font-weight: bold;
+  //border: 1px solid $color_gray_300;
+  //border-top: none;
+  transition: color 0.25s ease-in-out;
+
+  &:hover {
+    color: $color_black;
+  }
+
+}
+
+.c-frm__section-box-controls.is-alert {
+  color: $color_red_A200;
+
+  &:hover {
+    color: $color_red_A400;
+  }
+
+}
+
+// On the top; add new section cell...
+.c-frm__section-content-controls {
+  display: inline-flex;
+  position: absolute;
+  bottom: 100%; right: 0;
+  width: auto;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  // Controls message, label...
+  & span {
+    padding: 0 1rem;
+    color: $font_color_light;
+
+    &.is-accented {
+      color: $color_orange_A400;
+    }
+
+    &.is-success {
+      color: $color_success;
+    }
+
+    &.is-alert {
+      color: $color_alert;
+    }
+
+  }
+
+}
+
+.c-frm__cell {
+  display: flex;
+  position: relative;
+  align-items: center;
+
+
+  & > * + * {
+    margin-left: 0.5rem;
+  }
+
+}
+
+.c-frm__cell-controls {
+  display: inline-flex;
+  position: absolute;
+  bottom: 100%; right: 0;
+  width: auto;
+  height: auto;
+}
+
+.c-frm__cell-controls-item {
+  width: 1.5rem;
+  height: 100%;
+  fill: $font_color_lighter;
+  transition: fill 0.25s ease-in-out;
+
+  &:hover {
+    fill: $font_color_default;
+  }
+
+}
+
+.c-frm__field {
+  display: inline-flex;
+  position: relative;
+  flex: 1;
+  height: 100%;
+  flex-direction: column;
+  border-bottom: none;
+
+  &.is-disabled::after {
+    z-index: 3;
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: white;
+    opacity: 0.6;
+    cursor: initial;
+  }
+
+}
+
+.c-frm__field--short {
+  flex: 0;
+  width: 8rem;
+  min-width: 8rem;
+}
+
+.c-frm__input {
+  z-index: 2;
+  display: flex;
+  order: 2;
+  flex: 1;
+  width: 100%;
+  padding-top: 1rem;
+  background-color: transparent;
+  border: 1px solid $color_indigo_100;
+  border-bottom: 2px solid $color_indigo_300;
+  transition: border-color 0.25s ease-in-out;
+
+  &:focus {
+    //border-color: $color_orange_100;
+    border-bottom-color: $color_orange_A400;
+
+    & + .c-frm__label {
+      color: $font_color_default;
+    }
+
+  }
+
+}
+
+.c-frm__label {
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  order: 1;
+  height: 1.5rem;
+  padding: 0 0.25rem;
+  align-items: center;
+  font-size: $font_size_small;
+  text-transform: uppercase;
+  color: $font_color_light;
+  transition: color 0.25s ease-in-out;
+
+  & span {
+    margin-left: 0.25rem;
+    color: $color_indigo_300;
+  }
+
+}
+
+.c-frm__error {
+  display: flex;
+  position: absolute;
+  top: 100%; left: 0; right: 0;
+  height: 1rem;
+  padding: 0 0.25rem;
+  overflow: hidden;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: $font_size_smaller;
+  text-transform: uppercase;
+  color: $color_red_A400;
+}
+
+// .c-frm__section--display-only elements. Direct children of .c-frm__section--display-only element.
+.c-frm__display-label {
+  display: inline-flex;
+  color: $font_color_light;
+  text-transform: uppercase;
+}
+
+.c-frm__display-txt {
+  display: inline-flex;
+  text-transform: capitalize;
+}
+
+.c-frm__assign-panel {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(20rem, 1fr) minmax(20rem, 1fr);
+  grid-column-gap: 2rem;
+  margin-top: 4rem;
+}
+
+.c-frm__assign-panel-section {
+  display: flex;
+  position: relative;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color_white;
+  border-top: 1px solid $color_gray_300;
+  //border-bottom: 1px dashed $color_gray_200;
+
+  & > * + * {
+    margin-top: 1rem;
+  }
+
+}
+
+.c-frm__assign-panel-section-item {
+  display: flex;
+  width: 100%;
+  height: 2rem;
+  overflow: hidden;
+  align-items: center;
+  border: 1px solid $color_gray_300;
+}
+
+.c-frm__assign-panel-section-item-icon {
+  display: flex;
+  position: relative;
+  width: 2rem;
+  height: 100%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.1s ease-in-out;
+
+  & svg {
+    width: $svg_small;
+    height: $svg_small;
+  }
+
+  &:hover {
+    background-color: $color_gray_100;
+  }
+
+  &.is-success {
+    fill: $color_success;
+  }
+
+  &.is-alert {
+    fill: $color_alert;
+  }
+
+  &.is-disabled {
+    fill: $color_gray_300;
+
+    &::after {
+      cursor: inherit;
+    }
+
+    &:hover {
+      background-color: inherit;
+    }
+
+  }
+
+}
+
+.c-frm__assign-panel-section-item-info {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  padding: 0 0.5rem;
+  overflow: hidden;
+  align-items: center;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Individual tests specific modifiers
+
+.c-frm--burdonov .c-frm__section {
+  grid-template-columns: repeat(auto-fill, 20rem );
+}
+
+.c-frm--learning-styles .c-frm__section {
+  grid-template-columns: repeat(auto-fill, 8rem );
+}
+
+.c-frm--multiple-intelligence .c-frm__section {
+  grid-template-columns: repeat(auto-fill, 8rem );
+}
+
+.c-frm--observation-kinder .c-frm__section {
+  grid-template-columns: repeat(auto-fill, 8rem );
+}
+
+.c-frm--observation-kinder-advanced .c-frm__section {
+  grid-template-columns: repeat(auto-fill, 8rem );
+}
+
+.c-frm--observation-prim-sec .c-frm__section {
+  grid-template-columns: repeat(auto-fill, 8rem );
+}

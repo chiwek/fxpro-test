@@ -1,0 +1,234 @@
+.my-drop-zone[_ngcontent-vkk-1] {
+  border: dotted 3px lightgray;
+}
+
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+table {
+  background-color: transparent;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+user agent stylesheet
+table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: grey;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+
+.progress {
+  height: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: #337ab7;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+  -webkit-transition: width .6s ease;
+  -o-transition: width .6s ease;
+  transition: width .6s ease;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 0 4px 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+.btn-warning {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+.my-drop-zone {
+  border: dotted 3px lightgray;
+}
+
+.nv-file-over {
+  border: dotted 3px red;
+}
+
+/* Default class applied to drop zones on over */
+.another-file-over-class {
+  border: dotted 3px green;
+}
+
+.upload-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.container {
+  position: absolute;
+  top: 112px;
+  background: #f9f9f9;
+  padding: 20px;
+  left: 30%;
+  width: 40%;
+  border: solid 1px #bdbdbd;
+  z-index: 99;
+}
+
+.container-ul {
+  list-style-type: none;
+  padding: 10px;
+  color: #ff5353;
+  animation: blinker 2s step-start infinite;
+}
+
+@keyframes blinker {
+  20% {
+    opacity: 0;
+  }
+}
+
+form.FormCentered {
+  margin-top: 1rem;
+}
+
+.image-holder {
+  width: 153px;
+  height: 153px;
+  margin: auto;
+  border: solid 2px #aad1f7;
+  border-radius: 100px;
+}
+
+.image-holder img {
+  width: 149px;
+  height: 149px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.image-frame {
+  text-align: center;
+  max-width: 300px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.image-frame button {
+  width: 155px;
+  margin: auto;
+  border: solid 1px #b6dcfe;
+  background: transparent;
+  font-weight: 600;
+  background-color: #eaf4fd;
+  padding: 7px;
+}
+
+.image-frame label {
+  padding: 5px;
+  font-weight: 600;
+}
+
+.upload-click {
+  width: 155px;
+  margin: auto;
+  border: solid 1px #b6dcfe;
+  background: transparent;
+  font-weight: 600;
+  background-color: #eaf4fd;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.close-updater {
+  font-weight: bolder;
+  color: red;
+  width: 100%;
+  text-align: right;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+a.ng-tns-c4-1 .c-frm__display-txt {
+  cursor: pointer;
+}

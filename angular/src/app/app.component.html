@@ -1,0 +1,30 @@
+<div class="l-wrapper"
+	 (click)="template.globalClick()" >
+
+	<div class="l-side"
+		 *ngIf="user.loggedIn"
+		 (click)="template.globalClickPrevent($event)" >
+
+		<app-sidebar class="c-sidebar"></app-sidebar>
+
+		<app-navigation class="c-navigation"
+						[class.is-open]="template.show_navigation" ></app-navigation>
+
+
+	</div>
+
+	<div class="l-main">
+		<router-outlet></router-outlet>
+	</div>
+
+	<div class="l-toast" [class.l-toast--show]="toast.visible" >
+		<app-template-toast class="c-toast"></app-template-toast>
+	</div>
+
+	<!-- Options Overlay -->
+	<div class="l-overlay--full" *ngIf="modal.visible" @fadeFast >
+		<app-template-options class="c-overlay"></app-template-options>
+	</div>
+
+</div>
+

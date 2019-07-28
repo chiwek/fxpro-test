@@ -1,0 +1,141 @@
+// Basic class, goes first on all buttons
+.c-btn {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: $font_size_small;
+  border-radius: 2px;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, fill 0.25s ease-in-out;
+
+  &::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    cursor: pointer;
+  }
+
+  & svg {
+    width: $svg_small;
+    height: $svg_small;
+  }
+
+  &.is-disabled {
+    opacity: 0.5;
+    cursor: auto;
+
+    &::after {
+      cursor: auto;
+    }
+
+  }
+
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Size definitions
+
+// Framed/accented buttons
+.c-btn--type-1 {
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+}
+
+// List controls, Form section controls item
+.c-btn--type-2 {
+  width: 2rem;
+  height: 2rem;
+  fill: $color_orange_A400;
+  transition: fill 0.25s ease-in-out;
+
+  &:hover {
+    fill: $color_orange_A700;
+  }
+
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Paint
+
+// Orange
+.c-btn--accent-1 {
+  color: $color_orange_500;
+  fill: $color_orange_500;
+  background-color: $color_orange_100;
+  border: 1px solid $color_orange_300;
+
+  &:hover {
+    background-color: $color_orange_400;
+    color: white;
+  }
+
+  &.is-disabled:hover {
+    background-color: $color_orange_100;
+    color: $color_orange_500;
+  }
+
+}
+
+// Light Gray
+.c-btn--accent-2 {
+  color: $color_gray_500;
+  fill: $color_gray_500;
+  background-color: $color_gray_100;
+  border: 1px solid $color_gray_300;
+
+  &:hover {
+    background-color: $color_gray_500;
+    color: white;
+  }
+
+  &.is-disabled:hover {
+    background-color: $color_gray_100;
+    color: $color_gray_500;
+  }
+
+}
+
+// Green
+.c-btn--accent-3 {
+  color: $color_green_500;
+  fill: $color_green_500;
+  background-color: $color_green_100;
+  border: 1px solid $color_green_300;
+
+  &:hover {
+    background-color: $color_green_500;
+    color: white;
+  }
+
+  &.is-disabled:hover {
+    background-color: $color_green_100;
+    color: $color_green_500;
+  }
+
+
+}
+
+// Red
+.c-btn--accent-4 {
+  color: $color_red_500;
+  fill: $color_red_500;
+  background-color: $color_red_100;
+  border: 1px solid $color_red_300;
+
+  &:hover {
+    background-color: $color_red_500;
+    color: white;
+  }
+
+  &.is-disabled:hover {
+    background-color: $color_red_100;
+    color: $color_red_500;
+  }
+
+}

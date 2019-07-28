@@ -1,0 +1,185 @@
+<div class="c-page">
+
+    <div class="c-page__header">
+
+        <div class="c-page__header-title">STAFF</div>
+
+		<div class="c-page__header-item h-buttonize" title="Filter toggle"
+             [inlineSVG]="'/assets/svg/font_awesome/filter-solid.svg'"
+             [class.is-active]="filterOpen"
+             (click)="filterOpen = !filterOpen">
+
+        </div>
+
+    </div>
+
+    <div class="c-page__content">
+
+        <div class="c-list c-list--staff">
+
+            <div class="c-list__filter" *ngIf="filterOpen" @filterFade>
+
+                <div class="c-list__filter-form">
+
+                    <div class="c-list__filter-section">
+
+                        <div class="c-list__filter-cell">
+                            <input class="c-list__filter-input" type="text" name="name" [(ngModel)]="filterData.name">
+                            <label class="c-list__filter-label">Name</label>
+                        </div>
+
+                        <div class="c-list__filter-cell">
+                            <input class="c-list__filter-input" type="text" name="name" [(ngModel)]="filterData.name">
+                            <label class="c-list__filter-label">Username</label>
+                        </div>
+
+
+
+                        <div class="c-list__filter-cell">
+                            <input class="c-list__filter-input" type="text" name="email" [(ngModel)]="filterData.email">
+                            <label class="c-list__filter-label">Email</label>
+                        </div>
+
+                        <div class="c-list__filter-cell">
+                            <select class="c-list__filter-input" name="type" [(ngModel)]="filterData.type">
+                                <option value="0">Any</option>
+                                <option *ngFor="let role of roles" value="{{role.id}}">{{role.name}}</option>
+                            </select>
+                            <label class="c-list__filter-label">Type</label>
+                        </div>
+
+                        <div class="c-list__filter-cell">
+                            <select class="c-list__filter-input" name="isActive" [(ngModel)]="filterData.isActive">
+                                <option value="">Any</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                            <label class="c-list__filter-label">Active</label>
+                        </div>
+
+                    </div>
+
+                    <div class="c-list__filter-actions">
+                        <button class="c-btn c-btn--type-1 c-btn--accent-1" (click)="applyFilter()">SEARCH</button>
+                        <button class="c-btn c-btn--type-1 c-btn--accent-1" (click)="saveFilter()">SAVE</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="c-list__presets">
+                <!-- Click events go on .c-list__presets-item-label and on .c-list__presets-item-remove as well -->
+
+                <div class="c-list__presets-item" [class.is-active]="activeFilter == 'default'">
+                    <div class="c-list__presets-item-label c-btn" (click)="applyDefaultFilter()">DEFAULT</div>
+                </div>
+
+                <div class="c-list__presets-item" [class.is-active]="activeFilter == 'last_used'"
+                     *ngIf="getLastFilter() != null">
+                    <div class="c-list__presets-item-label c-btn" (click)="applyLastUsedFilter()">LAST USED</div>
+                </div>
+
+
+                <div class="c-list__presets-item" [class.is-active]="activeFilter == filter.name"
+                     *ngFor="let filter of pageFilters">
+                    <div class="c-list__presets-item-label c-btn" (click)="applySavedFilter(filter.name, filter.value)">
+                        {{filter.name}}
+                    </div>
+                    <div class="c-list__presets-item-remove c-btn"
+                         [inlineSVG]="'/assets/svg/font_awesome/times-solid.svg'"
+                         (click)="deleteFilter(filter.id)"></div>
+                </div>
+
+            </div>
+
+            <div class="c-list__header">
+
+                <div class="c-list__header-item">
+                    <div class="c-list__header-item-sort h-buttonize" list-sort
+                         [filter]="filterData"
+                         [name]="'users.firstname'"
+                         (click)="sortItems('users.firstname', $event)">
+                        <div class="c-list__header-item-sort-label">NAME</div>
+                        <div class="c-list__header-item-sort-icons">
+                            <span [inlineSVG]="'/assets/svg/font_awesome/arrow-up-solid.svg'"></span>
+                            <span [inlineSVG]="'/assets/svg/font_awesome/arrow-down-solid.svg'"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-list__header-item">
+                    <div class="c-list__header-item-sort h-buttonize" list-sort
+                         [filter]="filterData"
+                         [name]="'users.username'"
+                         (click)="sortItems('users.username', $event)">
+                        <div class="c-list__header-item-sort-label">USERNAME</div>
+                        <div class="c-list__header-item-sort-icons">
+                            <span [inlineSVG]="'/assets/svg/font_awesome/arrow-up-solid.svg'"></span>
+                            <span [inlineSVG]="'/assets/svg/font_awesome/arrow-down-solid.svg'"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-list__header-item">
+                    <div class="c-list__header-item-sort h-buttonize" list-sort
+                         [filter]="filterData"
+                         [name]="'users.email'"
+                         (click)="sortItems('users.email', $event)">
+                        <div class="c-list__header-item-sort-label">EMAIL</div>
+                        <div class="c-list__header-item-sort-icons">
+                            <span [inlineSVG]="'/assets/svg/font_awesome/arrow-up-solid.svg'"></span>
+                            <span [inlineSVG]="'/assets/svg/font_awesome/arrow-down-solid.svg'"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-list__header-item">
+                    <div class="c-list__header-item-sort h-buttonize" list-sort
+                         [filter]="filterData"
+                         [name]="'users.role_id'"
+                         (click)="sortItems('users.role_id', $event)">
+                        <div class="c-list__header-item-sort-label">TYPE</div>
+                        <div class="c-list__header-item-sort-icons">
+                            <span [inlineSVG]="'/assets/svg/font_awesome/arrow-up-solid.svg'"></span>
+                            <span [inlineSVG]="'/assets/svg/font_awesome/arrow-down-solid.svg'"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-list__header-item">Active</div>
+
+                <div class="c-list__header-item h-flex_row_align--right">
+                    <button class="c-btn c-btn--type-2"
+                            [inlineSVG]="'/assets/svg/font_awesome/plus-solid.svg'" (click)="showForm()"></button>
+                </div>
+
+            </div>
+
+            <div class="c-list__content" *ngIf="items.length > 0">
+
+                <div class="c-list__content-row" [class.is-inactive]="false" *ngFor="let item of items">
+
+                    <div class="c-list__row-item">{{item.firstname}} {{item.lastname}}</div>
+                    <div class="c-list__row-item">{{item.username}}</div>
+                    <div class="c-list__row-item">{{item.email}}</div>
+                    <div class="c-list__row-item">{{item.role.name}}</div>
+                    <div class="c-list__row-item">
+                        {{item.is_active}}
+                    </div>
+                    <div class="c-list__row-item h-flex_row_align--right">
+                        <button class="c-btn c-btn--type-1 c-btn--accent-1" (click)="showUser(item.id)">VIEW</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="c-list__no-results" *ngIf="items.length == 0">NO RESULTS</div>
+
+            <app-template-pagination></app-template-pagination>
+
+        </div>
+
+    </div>
+
+</div>

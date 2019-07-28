@@ -1,0 +1,16 @@
+// Group classes
+// Used to group specific elements with a specific purpose
+// =====================================================================================================================
+
+// Desktop size hide of certain dropdown items that originaly belong in sidebar
+.g-hide--dropdown {
+  display: none;
+}
+
+// =====================================================================================================================
+// Media queries
+
+// Dropdown items add when sidebar collapses
+@media screen and (max-width: $breakpoint_x_sidebar_collapse) {
+  .g-hide--dropdown { display: flex; }
+}

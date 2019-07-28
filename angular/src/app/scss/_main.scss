@@ -1,0 +1,43 @@
+// The architecture is based on ITCSS methodology
+// Import this file in the app's main scss file and it glues all the partials together in the specific order
+// This file shouldn't contain any styles other than the imports bellow!
+
+@import "01_settings/fonts";
+@import "01_settings/palettes";
+@import "01_settings/variables";
+
+@import "02_tools/functions";
+@import "02_tools/mixins";
+@import "02_tools/animations";
+//
+@import "03_generic/reset";
+
+@import "04_base/base";
+
+@import "05_layout/layout";
+
+@import "06_components/dropdown";
+@import "06_components/toast";
+@import "06_components/overlays";
+@import "06_components/routed";
+@import "06_components/buttons";
+@import "06_components/inputs";
+@import "06_components/checkboxes";
+@import "06_components/forms";
+@import "06_components/login";
+@import "06_components/tests";
+@import "06_components/lists";
+@import "06_components/filters";
+@import "06_components/sidebar";
+@import "06_components/navigation";
+@import "06_components/notifications";
+@import "06_components/mail";
+@import "06_components/messages";
+
+@import "07_themes/light";
+@import "07_themes/dark";
+
+@import "08_trumps/zindexes";
+@import "08_trumps/helpers";
+@import "08_trumps/groups";
+@import "08_trumps/overrides";

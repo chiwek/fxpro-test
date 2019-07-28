@@ -1,0 +1,11 @@
+<div class="c-sidebar__item h-buttonize"
+	 [class.is-active]="template.show_activeSidebarTab === 'more'"
+	 (click)="sidebarMoreClick()" >
+	<div class="c-sidebar__item-icon" [inlineSVG]="'assets/svg/font_awesome/bars-solid.svg'"></div>
+</div>
+
+
+<div class="c-sidebar__item h-buttonize"
+	 (click)="user.logout()" >
+	<div class="c-sidebar__item-icon" [inlineSVG]="'assets/svg/font_awesome/power-off-solid.svg'"></div>
+</div>

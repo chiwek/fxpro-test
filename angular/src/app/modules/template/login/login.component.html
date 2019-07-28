@@ -1,0 +1,46 @@
+<div class="c-page" *ngIf="showForm" >
+
+	<form class="c-login__form">
+
+		<div class="c-login__form-slot">
+
+			<input class="c-login__form-input"
+				   type="text" placeholder="USERNAME"
+				   name="username"
+				   autocomplete="current-password"
+				   [(ngModel)]="account.email">
+
+			<div class="c-login__form-icon"
+				 [inlineSVG]="'/assets/svg/font_awesome/user-solid.svg'" ></div>
+
+		</div>
+
+		<div class="c-login__form-slot">
+
+			<input class="c-login__form-input"
+				   type="password"
+				   placeholder="PASSWORD"
+				   name="password"
+				   autocomplete="current-password"
+				   [(ngModel)]="account.password">
+
+			<div class="c-login__form-icon"
+				 [inlineSVG]="'/assets/svg/font_awesome/key-solid.svg'" ></div>
+
+		</div>
+
+		<div class="c-login__form-slot">
+			<div class="c-login__form-error" *ngIf="error != ''" >Wrong Credentials!</div>
+			<button  class="c-login__form-submit" (click)="loginUser()">LOGIN</button>
+		</div>
+
+		<div class="c-login__form-slot">
+
+			<a class="c-login__form-forgot-pswrd"
+			   (click)="loginUser()">Forgot Password?</a>
+
+		</div>
+
+	</form>
+
+</div>

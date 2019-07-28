@@ -1,0 +1,33 @@
+<div class="c-overlay__interaction">
+    <div class="c-overlay__close" [inlineSVG]="'/assets/svg/font_awesome/times-solid.svg'" (click)="modal.hide()"></div>
+
+	<div class="c-overlay__interaction-message">{{modal.content}}</div>
+
+	<input class="c-overlay__interaction-input" type="text" name="modalVal" #modalInput
+		   *ngIf="modal.type == 3"
+		   [(ngModel)]="modal.modalVal"
+		   placeholder="{{modal.modalValPlaceholder}}" />
+
+    <select class="c-overlay__interaction-input" type="text" name="modalVal" #modalSelectInput
+            *ngIf="modal.type == 4"
+            [(ngModel)]="modal.modalSelectVal">
+        <option *ngFor="let i of modal.modalSelectOptions" value="{{i.value}}">{{i.name}}</option>
+    </select>
+
+    <div class="c-overlay__interaction-option c-btn--accent-1"
+		 (click)="modal.yesPressed()"
+		 *ngIf="modal.type == 1">YES</div>
+
+    <div class="c-overlay__interaction-option c-btn--accent-1"
+		 (click)="modal.noPressed()"
+		 *ngIf="modal.type == 1">NO</div>
+
+    <div class="c-overlay__interaction-option c-btn--accent-1"
+		 (click)="modal.infoOkPressed()"
+		 *ngIf="modal.type == 2">OK</div>
+
+    <div class="c-overlay__interaction-option c-btn--accent-1"
+		 (click)="modal.yesPressed()"
+		 *ngIf="modal.type == 3 || modal.type == 4">OK</div>
+
+</div>

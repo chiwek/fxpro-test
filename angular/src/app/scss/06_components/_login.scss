@@ -1,0 +1,95 @@
+.c-login__form {
+  display: flex;
+  width: 300px;
+  margin: auto;
+  flex-direction: column;
+
+  & > * + * {
+    margin-top: 0.5rem;
+  }
+
+}
+
+.c-login__form-slot {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+
+.c-login__form-input {
+  display: flex;
+  order: 2;
+  flex: 1;
+  height: 4rem;
+  border: 1px solid $color_indigo_100;
+  border-left: none;
+  transition: border-color 0.25s ease-in-out;
+
+  &:focus {
+
+    & + .c-login__form-icon {
+      fill: $color_orange_A400;
+    }
+
+  }
+
+}
+
+.c-login__form-icon {
+  display: flex;
+  order: 1;
+  width: 4rem;
+  height: 4rem;
+  justify-content: center;
+  align-items: center;
+  fill: $color_indigo_300;
+  border: 1px solid $color_indigo_100;
+  border-right: none;
+  transition: fill 0.25s ease-in-out;
+
+  & svg {
+    width: $svg_medium;
+    height: $svg_medium;
+  }
+
+}
+
+.c-login__form-submit {
+  display: inline-flex;
+  width: 8rem;
+  min-width: 8rem;
+  height: 2rem;
+  margin-left: auto;
+  font-weight: bold;
+  color: $color_indigo_300;
+  background-color: $color_indigo_50;
+  border: 1px solid $color_indigo_300;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+
+  &:hover {
+    color: $color_white;
+    background-color: $color_indigo_300;
+  }
+
+}
+
+.c-login__form-error {
+  display: inline-flex;
+  width: 100%;
+  color: $color_red_500;
+}
+
+.c-login__form-forgot-pswrd {
+  display: inline-flex;
+  margin: 2rem auto 0 auto;
+  cursor: pointer;
+  color: $font_color_light;
+  transition: color 0.1s ease-in-out;
+
+  &:hover {
+    color: $font_color_default;
+  }
+
+}

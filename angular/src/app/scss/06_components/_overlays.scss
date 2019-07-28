@@ -1,0 +1,142 @@
+/// Overlays specific elements
+// =====================================================================================================================
+
+.c-overlay {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+//.coverlay-backgdrop--thick,
+//.coverlay-backgdrop--opaque {
+//  position: absolute;
+//  top: 0; left: 0;
+//  width: 100%;
+//  height: 100%;
+//
+//  background-color: white;
+//
+//}
+//
+//.coverlay-backgdrop--opaque {
+//  opacity: 0.75;
+//}
+
+
+// Simple label and icon are for error msg, or loading...
+.c-overlay__simple_icon {
+  z-index: 2;
+  display: flex;
+  min-width: $svg_large;
+  min-height: $svg_large;
+
+  & svg {
+    width: $svg_large;
+    height: $svg_large;
+  }
+
+}
+
+.c-overlay__simple_label {
+  z-index: 2;
+  margin-left: 0.5rem;
+  font-size: $font_size_x_large;
+}
+
+// Interaction container is for popups that expect an option to be chosen
+.c-overlay__interaction {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  padding: 1rem;
+  flex-direction: column;
+  background-color: $color_white;
+  border: 1px solid $color_gray_400;
+  box-shadow: 0 0 5px silver;
+  border-radius: 2px;
+
+  & > * + * {
+    margin-top: 1rem;
+  }
+
+}
+
+.c-overlay__interaction-message {
+  display: flex;
+  width: 100%;
+  min-height: $dimension_header_height;
+  font-size: $font_size_x_large;
+  justify-content: center;
+  align-items: center;
+  //border: 1px solid red;
+}
+
+.c-overlay__interaction-input {
+  width: 100%;
+  height: 4rem;
+  //margin-bottom: 1rem;
+  border: 1px solid $color_gray_300;
+  transition: border-color 0.1s ease-in-out;
+}
+
+.c-overlay__interaction-option {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  //margin-bottom: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+
+
+  // cursor overlay
+  &::after {
+    display: block;
+    position: absolute;
+    top:0; left:0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    cursor: pointer;
+  }
+
+}
+
+.c-overlay__close {
+  z-index: 2;
+  display: flex;
+  position: absolute;
+  top: 0; right: 0;
+  padding: 1px;
+  fill: $font_color_light;
+  transition: fill 0.25s ease-in-out;
+
+  // cursor overlay
+  &::after {
+    display: block;
+    position: absolute;
+    top:0; left:0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    cursor: pointer;
+  }
+
+  & svg {
+    width: $svg-small;
+    height: $svg-small;
+  }
+
+  &:hover {
+    fill: $font_color_dark;
+  }
+
+}
+

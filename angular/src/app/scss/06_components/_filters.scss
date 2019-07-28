@@ -1,0 +1,69 @@
+.c-filter {
+  z-index: 2;
+  display: grid;
+  //position: absolute;
+  top: $dimension_header_height;
+  left: 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  overflow: hidden;
+  background-color: $color_app_bgr;
+  border-bottom: 1px solid silver;
+}
+
+.c-filter-cell,
+.c-filter-cell--actions {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  flex-direction: column;
+
+  & label {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0 0.5rem;
+  }
+
+  & input,
+  & select {
+    flex: 1;
+    width: 100%;
+    min-height: 2rem;
+    border: 1px solid silver;
+    transition: border-color 0.1s ease-in-out;
+
+    &:hover,
+    &:focus {
+      border-color: silver;
+    }
+
+  }
+
+}
+
+.c-filter-cell--actions {
+  grid-column: 1/6;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.c-filter-actions-item {
+  width: 5rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  font-family: $font-type-special-1;
+  font-size: 0.8rem;
+  background-color: white;
+  border-radius: 1px;
+  border: 1px solid silver;
+  transition: border-color 0.1s ease-in-out;
+
+  &:hover {
+    border: 1px solid silver;
+  }
+
+}

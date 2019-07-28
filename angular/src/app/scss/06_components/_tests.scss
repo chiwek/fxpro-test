@@ -1,0 +1,41 @@
+// Tests specific elements
+// =====================================================================================================================
+
+.c-test-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.c-test-form__title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.c-test-form__title-item {
+  display: flex;
+  min-width: 4rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: $font_size_small;
+  background-color: $color_indigo_300;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border: 1px solid $color_indigo_500;
+  color: $color-white;
+}
+
+.c-test-form__section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+// =====================================================================================================================
+// Media queries

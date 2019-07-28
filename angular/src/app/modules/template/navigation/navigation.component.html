@@ -1,0 +1,35 @@
+<div class="c-navigation__item h-buttonize" (click)="hideNav()"
+     [ngClass]="{ 'is-active': template.show_activeNavigationTab === 'staff' }"
+     routerLink="staff/staff-list">
+
+    <div class="c-navigation__item-icon"
+		 [inlineSVG]="'/assets/svg/font_awesome/arrow-alt-circle-right-regular.svg'"
+         [ngClass]="{ 'is-active': template.show_activeNavigationTab === 'staff' }"></div>
+
+    <div class="c-navigation__item-label">Staff</div>
+
+</div>
+
+<div class="c-navigation__item h-buttonize" (click)="hideNav()"
+     [ngClass]="{ 'is-active': template.show_activeNavigationTab === 'clients' }"
+     routerLink="staff/staff-list">
+
+    <div class="c-navigation__item-icon"
+         [inlineSVG]="'/assets/svg/font_awesome/arrow-alt-circle-right-regular.svg'"
+         [ngClass]="{ 'is-active': template.show_activeNavigationTab === 'clients' }"></div>
+
+    <div class="c-navigation__item-label">Clients</div>
+
+</div>
+
+<div class="c-navigation__item h-buttonize" (click)="hideNav()"
+     [ngClass]="{ 'is-active': template.show_activeNavigationTab === 'products' }"
+     routerLink="staff/staff-list">
+
+    <div class="c-navigation__item-icon"
+         [inlineSVG]="'/assets/svg/font_awesome/arrow-alt-circle-right-regular.svg'"
+         [ngClass]="{ 'is-active': template.show_activeNavigationTab === 'products' }"></div>
+
+    <div class="c-navigation__item-label">Products</div>
+
+</div>

@@ -1,0 +1,142 @@
+// Element selectors only!
+// =====================================================================================================================
+
+html {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: $font_type_default;
+  font-size: $dimension_rem_base;
+}
+
+body {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 768px;
+  min-height: 300px;
+  user-select: none;
+  background-color: $color_app_bgr;
+  color: $font_color_default;
+  fill: $font_color_default;
+}
+
+* {
+  //min-height: 0;
+  scrollbar-color: $color_scrollbar_thumb $color_scrollbar_track;
+  scrollbar-width: 10px;
+
+  &::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  &::-webkit-scrollbar-track-piece  {
+    background-color: $color_scrollbar_track;
+  }
+
+  &::-webkit-scrollbar-thumb:vertical {
+    height: 26px;
+    background-color: $color_scrollbar_thumb;
+  }
+
+}
+
+svg {
+  display: block;
+}
+
+form {
+  display: block;
+  width: 100%;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  height: 2rem; min-height: 2rem;
+  margin: 0;
+  padding: 0 0.5rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: text;
+
+  &::placeholder {
+    opacity: 0.4;
+    transition: opacity 0.1s ease-in-out;
+  }
+
+  &:focus::placeholder {
+    opacity: 0.25;
+  }
+
+}
+
+select {
+  appearance: none;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  font-size: $font_size_small;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: block;
+  width: 100%;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: $font_size_x_large;
+}
+
+h2 {
+  font-size: $font_size_large;
+}
+
+h3 {
+  font-size: $dimension_rem_base;
+}
+
+h4, h5, h6 {
+  font-size: $dimension_rem_base;
+}
+
+p {
+  display: block;
+  width: 100%;
+}
+
+router-outlet {
+  display: none;
+}
+
+// routed content generic wrapper
+router-outlet + * {
+  display: flex;
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+app-template-pagination {
+  width: 100%;
+}

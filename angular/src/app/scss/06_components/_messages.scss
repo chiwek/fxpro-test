@@ -1,0 +1,259 @@
+.c-messages {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background-color: $color_app_bgr;
+  border: 1px solid $color_blue_gray_200;
+  border-bottom: none;
+}
+
+.c-messages__header {
+  display: flex;
+  width: 100%;
+  height: 2.5rem;
+  padding-left: 1rem;
+  align-items: center;
+  background-color: $color_indigo_100;
+  border-bottom: 1px solid $color_gray_400;
+}
+
+.c-messages__header-title {
+  display: flex;
+  flex: 1;
+  font-weight: bold;
+
+  & i {
+    margin-left: 0.5rem;
+    font-weight: normal;
+  }
+
+}
+
+.c-messages__header-close {
+  display: flex;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+
+  & svg {
+    width: $svg_small;
+    height: $svg_small;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.c-messages__top {
+  display: flex;
+  width: 100%;
+  padding: 0 1rem;
+  flex-direction: column;
+
+}
+
+.c-messages__top-field {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 2.5rem;
+  align-items: center;
+  border-bottom: 1px solid $color_blue_gray_100;
+
+  & label {
+    margin-right: 1rem;
+  }
+
+  & input {
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+}
+
+.c-messages__top-field-dropdown {
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  min-height: auto;
+  max-height: 10rem;
+  position: absolute;
+  top: 100%; left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: $color_gray_100;
+  border: 1px solid $color_gray_300;
+
+  & > * + * {
+    margin-top: 1px;
+  }
+
+}
+
+.c-messages__top-field-dropdown-item,
+.c-messages__top-field-dropdown-item--embeded {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 0.25rem;
+  overflow: hidden;
+  align-items: center;
+  transition: background-color 0.1s ease-in-out;
+
+  & > * + * {
+    margin-left: 0.5rem;
+  }
+
+}
+
+.c-messages__top-field-dropdown-item:hover {
+  background-color: darken($color_gray_100, 3%);
+}
+
+.c-messages__top-field-dropdown-item-img {
+  display: flex;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $color_white;
+
+  & img {
+    width: auto;
+    height: 100%;
+  }
+
+}
+
+.c-messages__top-field-dropdown-item-label {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.c-messages__top-field-dropdown-item-info {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: $font_size_small;
+  color: $font_color_light;
+}
+
+.c-messages__text {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  padding: 0 1rem;
+  overflow: hidden;
+  flex-direction: column;
+
+  & textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    //border: 1px dotted red;
+  }
+
+}
+
+.c-messages__attachment {
+  display: flex;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  flex-direction: column;
+
+  & > * + * {
+    margin-top: 1px;
+  }
+
+}
+
+.c-messages__attachment-item {
+  display: flex;
+  position: relative;
+  width: auto;
+  height: 2rem;
+  background-color: $color_gray_100;
+  border: 1px solid $color_blue_gray_200;
+}
+
+.c-messages__attachment-item-label {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  padding: 0 0.5rem;
+  align-items: center;
+}
+
+.c-messages__attachment-item-close,
+.c-messages__attachment-item-processing {
+  display: flex;
+  position: relative;
+  width: 2rem;
+  height: 100%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+
+  & svg {
+    width: $svg_small;
+    height: $svg_small;
+  }
+
+}
+
+.c-messages__header-close,
+.c-messages__attachment-item-close {
+  opacity: 0.75;
+  transition: opacity 0.1s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+}
+
+.c-messages__controls {
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  justify-content: center;
+  background-color: $color_gray_100;
+  border-top: 1px solid $color_gray_300;
+}
+
+.c-messages__controls-item {
+  display: flex;
+  position: relative;
+  width: 4rem;
+  height: 100%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.75;
+  transition: opacity 0.1s ease-in-out;
+
+  & svg {
+    width: $svg_medium;
+    height: $svg_medium;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+}
