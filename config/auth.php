@@ -68,7 +68,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\FxPro::class,
+            'model' => App\FxPro\User\Models\User\User::class,
         ],
 
         // 'users' => [

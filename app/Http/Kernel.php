@@ -2,7 +2,9 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\ConvertNullsToEmptyStrings;
 use App\Http\Middleware\FxProAuth;
+use App\Http\Middleware\PreflightCheck;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -23,7 +25,7 @@ class Kernel extends HttpKernel
         ConvertNullsToEmptyStrings::class,
         \App\Http\Middleware\TrustProxies::class,
         PreflightCheck::class,
-        PromensAuth::class,
+        FxProAuth::class,
     ];
 
     /**

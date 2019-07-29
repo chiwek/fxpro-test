@@ -2,7 +2,7 @@
 
 Route::group([
     'middlewareGroups' => 'web',
-    'namespace' => 'App\Promens\Core\Controllers',
+    'namespace' => 'App\FxPro\Core\Controllers',
 ], function($router) {
 
 
@@ -25,10 +25,5 @@ Route::group([
         'middleware' => ['cors'],
         'uses' => 'AuthController@authToken',
     ])->name('core_post_auth_token');
-
-    $router->get('api/doc-test', [
-        'middleware' => [],
-        'uses' => 'AuthController@docTest',
-    ])->name('core_keep_test');
 
 });
