@@ -5,9 +5,12 @@ require 'recipe/laravel.php';
 
 // Configuration
 
-set('repository', 'istanisavljevic@bitbucket.org:codebliss/plant-stats.git');
+set('repository', 'https://github.com/chiwek/fxpro-test.git');
 //set('git_tty', true); // [Optional] Allocate tty for git on first deployment
-
+if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+    set('git_tty', false);
+    set('ssh_multiplexing', false);
+}
 
 set('env_file', 'local');
 
@@ -24,9 +27,9 @@ host('production')
     ->hostname('116.203.94.213')
     ->stage('production')
     ->set('branch', 'master')
-    ->user('wplants')
-    ->identityFile('~/.ssh/id_rsa')
-    ->set('deploy_path', '/home/wplants')
+    ->user('webfxpro')
+    ->identityFile('~/.ssh/id_rsa_no_pwd')
+    ->set('deploy_path', '/home/webfxpro')
     ->set('env_file', 'production.env')
     ->set('env_angular', 'production')
     ->set('rsync_src', '/home/vagrant/code/_angular/build')
@@ -44,18 +47,7 @@ task('laravel:vendors', function () {
     run('cd {{release_path}} && ');
 })->desc('Environment setup');
 
-task('angular:build', function() {
-    runLocally('cd D:\wamp\www\paprikart\plant-stats\_angular && ng build --configuration=production --base-href=/v1/');
-})->desc('Build Done');
 
-task('angular:copy_htaccess', function () {
-    runLocally('cd D:\wamp\www\paprikart\plant-stats\_angular && cp .htaccess dist\angular\.htaccess');
-})->desc('Copy HTACCESS');
-
-task('angular:copy_frontend', function () {
-    runLocally('cd D:\wamp\www\paprikart\plant-stats\_angular\dist\angular && cp *.* dist\angular\.htaccess');
-    run("cd {{release_path}}/_angular/dist/angular && cp * {{release_path}}/public/v1");
-})->desc('Copy Frontend');
 
 task('artisan:config:clear', function () {
 
@@ -67,9 +59,6 @@ task('shell:change', function() {
 })->desc('Changed Shell');
 
 
-task('local:build', function() {
-    runLocally('cd /home/vagrant/code/_angular && ng build --prod');
-})->desc('Changed Shell');
 
 
 task('version:bump', function() {
