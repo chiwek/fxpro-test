@@ -12,10 +12,10 @@ const routes: Routes = [
         loadChildren: "../app/modules/staff/staff.module#StaffModule",
         canActivate: [NeedAuthGuard, CheckRolePermissionGuard]
     },
-    /*
+
     {
         path: "clients",
-        loadChildren: "../app/modules/products/clients.module#clientsModule",
+        loadChildren: "../app/modules/clients/clients.module#clientsModule",
         canActivate: [NeedAuthGuard, CheckRolePermissionGuard]
     },
     {
@@ -23,7 +23,7 @@ const routes: Routes = [
         loadChildren: "../app/modules/products/products.module#productsModule",
         canActivate: [NeedAuthGuard, CheckRolePermissionGuard]
     },
-    */
+
     {
         path: "",
         component: LoginComponent

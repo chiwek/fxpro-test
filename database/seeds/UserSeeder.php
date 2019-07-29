@@ -33,7 +33,6 @@ class UserSeeder extends Seeder
             'password' => bcrypt('nenad'),
             'remember_token' => '',
             'role_id' => 2,
-            'franchise_id' => 1,
             'date_registered' => date('Y-m-d H:i:s'),
             'is_active' => true
         ]);

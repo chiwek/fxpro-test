@@ -1,0 +1,109 @@
+<div class="c-page">
+
+    <div class="c-page__header">
+
+        <div class="c-page__header-title">CREATE/EDIT A CLIENT</div>
+
+        <div class="c-page__header-item h-buttonize" title="Save and go to back to the list"
+             [inlineSVG]="'/assets/svg/font_awesome/save-solid.svg'"
+             (click)="submitForm(true)"></div>
+
+        <div class="c-page__header-item h-buttonize" title="Save and go to the view page"
+             [inlineSVG]="'/assets/svg/font_awesome/save-regular.svg'" (click)="submitForm(false)"></div>
+
+        <div class="c-page__header-item h-buttonize" title="Close without saving"
+             [inlineSVG]="'/assets/svg/font_awesome/times-solid.svg'" (click)="cancelForm(id)"></div>
+
+    </div>
+
+    <div class="c-page__content">
+
+        <form class="c-frm" [formGroup]="frm" (submit)="submitForm(true)">
+
+            <div class="c-frm__section">
+
+                <div class="c-frm__section-title">GENERAL</div>
+
+                <div class="c-frm__cell">
+                    <div class="c-frm__field">
+                        <input type="text" class="c-frm__input h-text-capitalize" formControlName="firstname">
+                        <label class="c-frm__label">FIRST NAME</label>
+                        <div class="c-frm__error" *ngIf="validateField('firstname', 'required')">Required</div>
+                    </div>
+                </div>
+
+                <div class="c-frm__cell">
+                    <div class="c-frm__field">
+                        <input type="text" class="c-frm__input h-text-capitalize" formControlName="lastname">
+                        <label class="c-frm__label">LAST NAME</label>
+                        <div class="c-frm__error" *ngIf="validateField('lastname', 'required')">Required</div>
+                    </div>
+                </div>
+
+                <div class="c-frm__cell">
+                    <div class="c-frm__field">
+                        <select class="c-frm__input h-text-capitalize" formControlName="product">
+                            <option *ngFor="let product of products" value="{{product.id}}">{{product.name}}</option>
+                        </select>
+                        <label class="c-frm__label">USER TYPE</label>
+                        <div class="c-frm__error" *ngIf="validateField('product', 'required')">Required</div>
+                    </div>
+                </div>
+
+                <div class="c-frm__cell">
+                    <div class="c-frm__field">
+                        <select class="c-frm__input h-text-capitalize" formControlName="is_active">
+                            <option value="{{true}}">Yes</option>
+                            <option value="{{false}}">No</option>
+                        </select>
+                        <label class="c-frm__label">ACTIVE</label>
+                        <div class="c-frm__error" *ngIf="validateField('is_active', 'required')">Required</div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="c-frm__section">
+
+                <div class="c-frm__section-title">CONTACT INFO</div>
+
+                <div class="c-frm__cell">
+                    <div class="c-frm__field">
+                        <input type="text" class="c-frm__input h-text-capitalize" formControlName="email">
+                        <label class="c-frm__label">EMAIL</label>
+                        <div class="c-frm__error" *ngIf="validateField('email', 'required')">Required</div>
+                    </div>
+                </div>
+
+                <div class="c-frm__cell">
+                    <div class="c-frm__field">
+                        <input type="text" class="c-frm__input h-text-capitalize" formControlName="phone">
+                        <label class="c-frm__label">PHONE</label>
+                        <div class="c-frm__error" *ngIf="false">Required</div>
+                    </div>
+                </div>
+
+                <div class="c-frm__cell">
+                    <div class="c-frm__field">
+                        <input type="text" class="c-frm__input h-text-capitalize" formControlName="cellphone">
+                        <label class="c-frm__label">CELLPHONE</label>
+                        <div class="c-frm__error" *ngIf="false">Required</div>
+                    </div>
+                </div>
+
+                <div class="c-frm__cell">
+                    <div class="c-frm__field">
+                        <input type="text" class="c-frm__input h-text-capitalize" formControlName="note">
+                        <label class="c-frm__label">NOTE</label>
+                        <div class="c-frm__error" *ngIf="false">Required</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

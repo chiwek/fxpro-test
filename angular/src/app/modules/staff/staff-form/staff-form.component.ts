@@ -46,10 +46,8 @@ export class StaffFormComponent extends FormBaseComponent implements OnInit {
             this.user.is_active = true;
 
             setTimeout( () => {
-                this.user.franchise_id = this.globals.lists.franchises[0].id;
                 this.user.role_id = this.globals.lists.roles[0].id;
 
-                this.franchises = this.globals.lists.franchises;
                 this.roles  = this.globals.lists.roles;
 
                 this.loadForm();

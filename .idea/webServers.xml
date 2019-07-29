@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1415b082-0adc-413f-85b6-cfabec1a2ab9" name="FxPro" url="http://116.203.94.213">
+        <fileTransfer host="116.203.94.213" port="22" privateKey="C:\Users\Ivan\.ssh\id_rsa_no_pwd" rootFolder="/home/webfxpro" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

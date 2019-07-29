@@ -1,33 +1,25 @@
 import {BaseModel} from "./base-model";
+import {ɵbypassSanitizationTrustHtml} from "@angular/core";
 
-export class Staff extends BaseModel {
+export class Client extends BaseModel {
     id: number;
-    role_id: number;
+    product_id: number;
 
     firstname: string;
     lastname: string;
     email: string;
-    image: string;
-    files: any;
 
-    username: string;
-    password: string;
-    remember_token: string;
+
     phone: string;
     cellphone: string;
     note: string;
 
-    date_registered: Date;
-    date_activated: Date;
-
     is_active: boolean;
 
-    date_login: Date;
     created_at: Date;
     updated_at: Date;
 
-    role: any;
-
+    product: any;
     _saveUrl:string;
     _updateUrl:string;
 
@@ -35,17 +27,12 @@ export class Staff extends BaseModel {
 
         super(fields);
 
-        this._saveUrl = 'user/create';
-        this._updateUrl = 'user/update';
+        this._saveUrl = 'clients/create';
+        this._updateUrl = 'clients/update';
     }
-
-
 
     public getName() {
         return this.lastname + ' ' + this.firstname;
     }
 
-    public getRoleName() {
-        return this.role.name;
-    }
 }
