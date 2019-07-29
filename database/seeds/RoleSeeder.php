@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use \App\Promens\User\Models\Role\Role;
+use \App\FxPro\User\Models\Role\Role;
 
 class RoleSeeder extends Seeder
 {

@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use \App\Promens\User\Models\Permission\Permission;
-use \App\Promens\User\Models\RolePermission\RolePermission;
+use \App\FxPro\User\Models\Permission\Permission;
+use \App\FxPro\User\Models\RolePermission\RolePermission;
 
 class PermissionSeeder extends Seeder
 {

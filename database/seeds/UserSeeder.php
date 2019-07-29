@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use \App\Promens\User\Models\User\User;
-use \App\Promens\User\Models\UserSetting\UserSetting;
+use \App\FxPro\User\Models\User\User;
 
 
 class UserSeeder extends Seeder
