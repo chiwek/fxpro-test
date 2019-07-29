@@ -69,6 +69,7 @@ class User extends Authenticatable
         $creatingUser = false;
         if ($this->id < 0) {
             $creatingUser = true;
+            $this->date_registered = date('Y-m-d H:i:s');
         }
         $saved = parent::save($options);
         if ($creatingUser) {

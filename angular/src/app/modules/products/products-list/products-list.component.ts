@@ -29,7 +29,6 @@ export class ProductsListComponent extends ListBaseComponent implements OnInit {
 
     } = {
         name: '',
-        email: '',
         page: 1,
         perPage: 20,
         order: ['products.name'],

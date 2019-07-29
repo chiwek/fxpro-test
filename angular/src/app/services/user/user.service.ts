@@ -175,9 +175,7 @@ export class UserService {
         if (roleId === 1 ) {
             url ='staff/list';
         } else if (roleId === 2 ) {
-            url ='staff/list';
-        } else if (roleId === 3 ) {
-            url ='staff/list';
+            url ='clients/list';
         }
         return url;
     }

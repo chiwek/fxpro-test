@@ -39,7 +39,7 @@ export class StaffFormComponent extends FormBaseComponent implements OnInit {
 
     public loadUser() {
         if (this.id > 0) {
-            this.api.call('get', 'user/get', {id: this.id}, this.userLoaded.bind(this));
+            this.api.call('get', 'users/get', {id: this.id}, this.userLoaded.bind(this));
 
         } else {
             this.user = new Staff();
@@ -139,7 +139,7 @@ export class StaffFormComponent extends FormBaseComponent implements OnInit {
 
             this.api.call(
                 'post',
-                'user/process-form',
+                'users/process-form',
                 this.frm.value,
                 this.saveSuccess.bind(this),
                 this.saveError.bind(this));

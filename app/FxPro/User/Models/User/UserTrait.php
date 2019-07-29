@@ -24,6 +24,8 @@ trait UserTrait
         // $user->status_professor = 0;
         $user->is_active = $data['is_active'] == "true" ? true : false;
 
+
+        $this->date_registered = date('Y-m-d H:i:s');
         $user->save();
 
         $message = "User created successfuly";
