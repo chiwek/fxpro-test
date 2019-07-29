@@ -35,7 +35,5 @@ class UserSeeder extends Seeder
             'date_registered' => date('Y-m-d H:i:s'),
             'is_active' => true
         ]);
-
-
     }
 }
