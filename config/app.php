@@ -175,7 +175,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        App\FxPro\BaseServiceProvider::class
+        App\FxPro\BaseServiceProvider::class,
+        App\FxPro\ResponseMacroServiceProvider::class
     ],
 
     /*

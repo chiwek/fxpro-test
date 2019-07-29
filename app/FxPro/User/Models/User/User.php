@@ -33,7 +33,7 @@ class User extends Authenticatable
     ];
 
 
-    public $with = ['role', 'franchise', 'files', 'filters', 'qualification'];
+    public $with = ['role', 'filters'];
 
     //<editor-fold desc="Relations">
 
