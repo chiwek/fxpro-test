@@ -1,3 +1,37 @@
-<p>
-  products-view works!
-</p>
+<div class="c-page" *ngIf="item">
+
+    <div class="c-page c-page--details">
+
+        <div class="c-page__header">
+
+            <div class="c-page__header-title">{{item.name}}</div>
+
+            <div class="c-page__header-item h-buttonize" title="Edit"
+                 [inlineSVG]="'/assets/svg/font_awesome/edit-solid.svg'" (click)="showForm(item.id)"></div>
+
+            <div class="c-page__header-item h-buttonize" title="Go back to the list"
+                 [inlineSVG]="'/assets/svg/font_awesome/times-solid.svg'" (click)="backToList()"></div>
+
+        </div>
+
+        <div class="c-page__content">
+
+            <div class="c-frm">
+
+
+                <div class="c-frm__section c-frm__section--display-only-horizontal">
+
+                    <div class="c-frm__section-title">GENERAL</div>
+
+                    <div class="c-frm__cell">
+                        <div class="c-frm__display-label">Product:</div>
+                        <div class="c-frm__display-txt">{{item.name}}</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

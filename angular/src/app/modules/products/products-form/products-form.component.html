@@ -1,3 +1,54 @@
-<p>
-  products-form works!
-</p>
+<div class="c-page">
+
+  <div class="c-page__header">
+
+    <div class="c-page__header-title">CREATE/EDIT A PRODUCT</div>
+
+    <div class="c-page__header-item h-buttonize" title="Save and go to back to the list"
+         [inlineSVG]="'/assets/svg/font_awesome/save-solid.svg'"
+         (click)="submitForm(true)"></div>
+
+    <div class="c-page__header-item h-buttonize" title="Save and go to the view page"
+         [inlineSVG]="'/assets/svg/font_awesome/save-regular.svg'" (click)="submitForm(false)"></div>
+
+    <div class="c-page__header-item h-buttonize" title="Close without saving"
+         [inlineSVG]="'/assets/svg/font_awesome/times-solid.svg'" (click)="cancelForm(id)"></div>
+
+  </div>
+
+  <div class="c-page__content">
+
+    <form class="c-frm" [formGroup]="frm" (submit)="submitForm(true)">
+
+      <div class="c-frm__section">
+
+        <div class="c-frm__section-title">GENERAL</div>
+
+        <div class="c-frm__cell">
+          <div class="c-frm__field">
+            <input type="text" class="c-frm__input h-text-capitalize" formControlName="name">
+            <label class="c-frm__label">NAME</label>
+            <div class="c-frm__error" *ngIf="validateField('name', 'required')">Required</div>
+          </div>
+        </div>
+
+        <div class="c-frm__cell">
+          <div class="c-frm__field">
+            <select class="c-frm__input h-text-capitalize" formControlName="is_active">
+              <option value="{{true}}">Yes</option>
+              <option value="{{false}}">No</option>
+            </select>
+            <label class="c-frm__label">ACTIVE</label>
+            <div class="c-frm__error" *ngIf="validateField('is_active', 'required')">Required</div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </form>
+
+  </div>
+
+</div>

@@ -53,7 +53,7 @@ export class ClientsViewComponent implements OnInit {
     }
 
     private itemLoaded(data) {
-        this.item = new Client(data.user);
+        this.item = new Client(data.client);
 
     }
 
