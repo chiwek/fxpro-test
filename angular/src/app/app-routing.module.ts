@@ -15,12 +15,12 @@ const routes: Routes = [
 
     {
         path: "clients",
-        loadChildren: "../app/modules/clients/clients.module#clientsModule",
+        loadChildren: "../app/modules/clients/clients.module#ClientsModule",
         canActivate: [NeedAuthGuard, CheckRolePermissionGuard]
     },
     {
         path: "products",
-        loadChildren: "../app/modules/products/products.module#productsModule",
+        loadChildren: "../app/modules/products/products.module#ProductsModule",
         canActivate: [NeedAuthGuard, CheckRolePermissionGuard]
     },
 

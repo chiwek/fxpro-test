@@ -8,6 +8,16 @@ return [
             'Models' => [
                 'User'
             ]
+        ],
+        'Client' => [
+            'Models' => [
+                'Client'
+            ]
+        ],
+        'Product' => [
+            'Models' => [
+                'Product'
+            ]
         ]
     ]
 ];
