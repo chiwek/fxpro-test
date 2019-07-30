@@ -10,7 +10,8 @@ export class GlobalService {
 
 
     public lists: any; //array contining franchises, roles, etc.. for dropdowns
-    public settings: any;
+    public products: any;
+    public roles: any;
     public filters: any; // all filters saved by the user
 
     public globalsUpdated: Subject<any> = new Subject();
@@ -31,7 +32,8 @@ export class GlobalService {
     private _loadComplete(data) {
 
         this.lists = data.lists;
-        this.settings = data.settings;
+        this.products = data.products;
+        this.roles = data.roles;
         this.filters = data.filters;
 
         this.globalsUpdated.next(data);
@@ -53,14 +55,5 @@ export class GlobalService {
 
     }
 
-    public getSetting(name) {
-        var value = '';
-        this.settings.forEach(s => {
-            if (s.name == name) {
-                value = s.value;
-            }
-        })
-        return value;
-    }
 
 }

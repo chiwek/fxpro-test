@@ -2,6 +2,7 @@
 
 namespace App\FxPro\User\Controllers;
 
+use App\FxPro\Product\Models\Product\Product;
 use App\FxPro\User\Models\Role\Role;
 use App\FxPro\User\Models\User\User;
 use App\FxPro\User\Models\User\UserInterface;
@@ -62,15 +63,19 @@ class UserController extends Controller
         $lists = [];
         $lists['roles'] = Role::all();
         $filters = $user->filters;
-        $settings = $user->setting;
+        $products = Product::all();
+        $roles = Role::all();
 
 
         return response()->success(compact(
-            'lists', 'filters', 'settings'));
+            'lists', 'filters', 'products', 'roles'));
     }
 
     public function getUser(Request $request)
     {
+        $requiredData['id'] = 'required|exists:users,id';
+        $this->validate($request, $requiredData);
+
 
         $user = User::find($request->input('id'));
 

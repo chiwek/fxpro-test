@@ -99,6 +99,21 @@ export class StaffListComponent extends ListBaseComponent implements OnInit {
 
     }
 
+    deleteUser(id) {
+        this.modal.confirm(
+            "Are you sure?",
+            () => {
+                this.api.call(
+                    'post',
+                    'users/delete',
+                    {id:id},
+                    this.loadItems.bind(this)
+                );
+            },
+            null
+        );
+    }
+
     showForm() {
         this.router.navigate(['staff/form'], {queryParams: {id: 0}});
     }

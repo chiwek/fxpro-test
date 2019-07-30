@@ -27,14 +27,13 @@ class AuthController extends Controller
     public function authenticateUser(Request $request) {
         $credentials = [
             'email' => $request->input('email'),
-            'password' => $request->input('password')
+            'password' => $request->input('password'),
+            'is_active' => '1'
         ];
 
 
         if (Auth::attempt($credentials, true)) {
             $user = Auth::user();
-
-            $user->role = Role::find(1);
 
             $token = $user->getRememberToken();
             return response()->success(compact('user', 'token'));

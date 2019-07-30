@@ -5,6 +5,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {CanDirective} from "./directives/can.directive";
 import {CanUrlDirective} from "./directives/can-url.directive";
 import {ListSortDirective} from "./directives/list-sort.directive";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 @NgModule({
