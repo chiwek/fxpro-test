@@ -7,12 +7,17 @@ You can see the app in action here:
 
 http://fxpro.codebliss.biz/v1 
 
+## Deployment
+
+Deployment is done with Deployer(deployer/deployer) package
+If familiar with it, you can deploy easily to your server with modifying deploy.php in the app home.
+
 ## Host on your servers 
 ### Requirements
 
 - Apache 2
 - Php 7.2 or newer
-- Mysql 8 or newer (Has JSON support)
+- Mysql 8 or newer (Has JSON column support)
 - Composer
 - Node with NPM installed
 - Angular CLI 7

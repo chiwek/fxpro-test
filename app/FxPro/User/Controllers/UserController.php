@@ -63,7 +63,7 @@ class UserController extends Controller
         $lists = [];
         $lists['roles'] = Role::all();
         $filters = $user->filters;
-        $products = Product::all();
+        $products = Product::where('is_active', 1)->get();
         $roles = Role::all();
 
 

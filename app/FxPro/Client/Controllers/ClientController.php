@@ -8,6 +8,7 @@ use App\FxPro\Client\Models\Client\ClientInterface;
 use App\FxPro\Client\Models\Client\ClientTrait;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller
 {
@@ -87,6 +88,22 @@ class ClientController extends Controller
             $client = $this->updateClient($client, $data);
         }
         return response()->success(compact('client'));
+    }
+
+    public function deleteClient(Request $request) {
+        $requiredData['id'] = 'required|exists:clients,id';
+        $this->validate($request, $requiredData);
+
+        $authUser = Auth::user();
+        if (!$authUser->canDelete()) {
+            return response()->error('NO ACCESS');
+        }
+
+        $client = Client::find($request->input('id'));
+        $client->is_active = false;
+        $client->save();
+
+        return response()->success('OK');
     }
 
 
