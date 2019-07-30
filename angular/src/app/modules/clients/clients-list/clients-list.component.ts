@@ -87,6 +87,21 @@ export class ClientsListComponent extends ListBaseComponent implements OnInit {
 
     }
 
+    deleteUser(id) {
+        this.modal.confirm(
+            "Are you sure?",
+            () => {
+                this.api.call(
+                    'post',
+                    'clients/delete',
+                    {id:id},
+                    this.loadItems.bind(this)
+                );
+            },
+            null
+        );
+    }
+
     showForm() {
         this.router.navigate(['clients/form'], {queryParams: {id: 0}});
     }

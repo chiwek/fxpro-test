@@ -42,7 +42,7 @@ export class StaffListComponent extends ListBaseComponent implements OnInit {
     } = {
         name: '',
         email: '',
-        type: "0",
+        type: "",
         page: 1,
         perPage: 20,
         order: ['users.firstname'],
@@ -121,7 +121,7 @@ export class StaffListComponent extends ListBaseComponent implements OnInit {
     resetFilter() {
         this.filterData.name = '';
         this.filterData.email = '';
-        this.filterData.type = "0";
+        this.filterData.type = "";
         this.filterData.page = 1;
         this.filterData.perPage = 20;
         this.filterData.order = ['users.firstname'];

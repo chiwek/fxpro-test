@@ -46,7 +46,7 @@ class FilterCriteria extends Criteria {
             $model->where('users.is_active', "{$this->isActive}");
         }
 
-        if ($this->type != 0) {
+        if ($this->type > 0) {
             $model->where('users.role_id', $this->type);
         }
 

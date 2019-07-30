@@ -45,7 +45,7 @@ export class ProductsListComponent extends ListBaseComponent implements OnInit {
 
 
 
-    showUser(id) {
+    showProduct(id) {
         this.router.navigate(['products/view'], {queryParams: {id: id}});
 
     }
@@ -80,6 +80,21 @@ export class ProductsListComponent extends ListBaseComponent implements OnInit {
             this.saveLastFilter();
         }
 
+    }
+
+    deleteProduct(id) {
+        this.modal.confirm(
+            "Are you sure?",
+            () => {
+                this.api.call(
+                    'post',
+                    'products/delete',
+                    {id:id},
+                    this.loadItems.bind(this)
+                );
+            },
+            null
+        );
     }
 
     showForm() {

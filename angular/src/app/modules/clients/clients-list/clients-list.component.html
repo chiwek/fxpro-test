@@ -83,8 +83,8 @@
         <div class="c-list__header-item">
           <div class="c-list__header-item-sort h-buttonize" list-sort
                [filter]="filterData"
-               [name]="'users.firstname'"
-               (click)="sortItems('users.firstname', $event)">
+               [name]="'clients.firstname'"
+               (click)="sortItems('clients.firstname', $event)">
             <div class="c-list__header-item-sort-label">NAME</div>
             <div class="c-list__header-item-sort-icons">
               <span [inlineSVG]="'/assets/svg/font_awesome/arrow-up-solid.svg'"></span>
@@ -96,8 +96,8 @@
         <div class="c-list__header-item">
           <div class="c-list__header-item-sort h-buttonize" list-sort
                [filter]="filterData"
-               [name]="'users.username'"
-               (click)="sortItems('users.username', $event)">
+               [name]="'clients.username'"
+               (click)="sortItems('clients.username', $event)">
             <div class="c-list__header-item-sort-label">PRODUCT</div>
             <div class="c-list__header-item-sort-icons">
               <span [inlineSVG]="'/assets/svg/font_awesome/arrow-up-solid.svg'"></span>
@@ -109,8 +109,8 @@
         <div class="c-list__header-item">
           <div class="c-list__header-item-sort h-buttonize" list-sort
                [filter]="filterData"
-               [name]="'users.email'"
-               (click)="sortItems('users.email', $event)">
+               [name]="'clients.email'"
+               (click)="sortItems('clients.email', $event)">
             <div class="c-list__header-item-sort-label">EMAIL</div>
             <div class="c-list__header-item-sort-icons">
               <span [inlineSVG]="'/assets/svg/font_awesome/arrow-up-solid.svg'"></span>
@@ -141,6 +141,7 @@
           </div>
           <div class="c-list__row-item h-flex_row_align--right">
             <button class="c-btn c-btn--type-1 c-btn--accent-1" (click)="showUser(item.id)">VIEW</button>
+            <button class="c-btn c-btn--type-1 c-btn--accent-1" (click)="deleteUser(item.id)">DELETE</button>
           </div>
         </div>
 

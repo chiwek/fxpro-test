@@ -79,7 +79,7 @@
           <div class="c-list__header-item-sort h-buttonize" list-sort
                [filter]="filterData"
                [name]="'products.name'"
-               (click)="sortItems('users.firstname', $event)">
+               (click)="sortItems('products.name', $event)">
             <div class="c-list__header-item-sort-label">NAME</div>
             <div class="c-list__header-item-sort-icons">
               <span [inlineSVG]="'/assets/svg/font_awesome/arrow-up-solid.svg'"></span>
@@ -107,7 +107,8 @@
             {{item.is_active}}
           </div>
           <div class="c-list__row-item h-flex_row_align--right">
-            <button class="c-btn c-btn--type-1 c-btn--accent-1" (click)="showUser(item.id)">VIEW</button>
+            <button class="c-btn c-btn--type-1 c-btn--accent-1" (click)="showProduct(item.id)">VIEW</button>
+            <button class="c-btn c-btn--type-1 c-btn--accent-1" (click)="deleteProduct(item.id)">DELETE</button>
           </div>
         </div>
 
