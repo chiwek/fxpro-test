@@ -8,6 +8,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {GlobalService} from "../../../services/user/global.service";
 import {ToastService} from "../../../services/frontend/toast.service";
 import {Product} from "../../../models/product";
+import {UserService} from "../../../services/user/user.service";
 
 @Component({
   selector: 'app-products-form',
@@ -21,7 +22,7 @@ export class ProductsFormComponent extends FormBaseComponent implements OnInit {
 
     private goToList = false;
 
-    constructor(public route: ActivatedRoute, private api: ApiService, private _fb: FormBuilder,
+    constructor(public route: ActivatedRoute, private api: ApiService, private _fb: FormBuilder, private user: UserService,
                 private modal: ModalService, private toast: ToastService, private router: Router) {
         super(route);
         this.loadForm();
@@ -91,6 +92,8 @@ export class ProductsFormComponent extends FormBaseComponent implements OnInit {
 
     saveSuccess(data) {
         this.toast.show(data.product.message);
+        this.user.global.loadAll();
+
         if (this.goToList) {
             this.goBackToList();
         } else {

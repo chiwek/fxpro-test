@@ -18,8 +18,7 @@ export class StaffFormComponent extends FormBaseComponent implements OnInit {
 
     public user: Staff = new Staff();
     public id: number;
-    public franchises: any;
-    public roles: any;
+
 
     private goToList = false;
 
@@ -45,13 +44,8 @@ export class StaffFormComponent extends FormBaseComponent implements OnInit {
             this.user = new Staff();
             this.user.is_active = true;
 
-            setTimeout( () => {
-                this.user.role_id = this.globals.lists.roles[0].id;
+            this.loadForm();
 
-                this.roles  = this.globals.lists.roles;
-
-                this.loadForm();
-            }, 200 );
         }
     }
 
@@ -59,8 +53,6 @@ export class StaffFormComponent extends FormBaseComponent implements OnInit {
 
 
         this.user = new Staff(data.user);
-        this.franchises = this.globals.lists.franchises;
-        this.roles  = this.globals.lists.roles;
 
         this.loadForm();
     }

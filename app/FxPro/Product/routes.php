@@ -16,10 +16,14 @@ Route::group([
         'uses' => 'ProductController@getProduct',
     ])->name('product_get');
 
-
     $router->post('api/products/process-form', [
         'middleware' => ['cors'],
         'uses' => 'ProductController@processForm',
     ])->name('product_process');
+
+    $router->post('api/products/delete', [
+        'middleware' => ['cors'],
+        'uses' => 'ProductController@deleteProduct',
+    ])->name('product_delete');
 
 });

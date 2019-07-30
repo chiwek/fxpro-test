@@ -22,4 +22,8 @@ Route::group([
         'uses' => 'ClientController@processForm',
     ])->name('client_process');
 
+    $router->post('api/clients/delete', [
+        'middleware' => ['cors'],
+        'uses' => 'ClientController@deleteClient',
+    ])->name('client_delete');
 });

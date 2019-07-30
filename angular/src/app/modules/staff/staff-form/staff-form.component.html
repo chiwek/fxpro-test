@@ -43,7 +43,7 @@
                 <div class="c-frm__cell">
                     <div class="c-frm__field">
                         <select class="c-frm__input h-text-capitalize" formControlName="role">
-                            <option *ngFor="let role of roles" value="{{role.id}}">{{role.name}}</option>
+                            <option *ngFor="let role of globals.roles" value="{{role.id}}">{{role.name}}</option>
                         </select>
                         <label class="c-frm__label">USER TYPE</label>
                         <div class="c-frm__error" *ngIf="validateField('role', 'required')">Required</div>

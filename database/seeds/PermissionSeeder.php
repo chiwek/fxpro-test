@@ -185,5 +185,14 @@ class PermissionSeeder extends Seeder
             'role_id' => 2,
             'permission_id' => 12,
         ]);
+
+        Permission::create([
+            'name' => 'Delete',
+            'action' => 'delete'
+        ]);
+        RolePermission::create([
+            'role_id' => 1,
+            'permission_id' => 13,
+        ]);
     }
 }

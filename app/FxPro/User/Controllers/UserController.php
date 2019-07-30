@@ -34,9 +34,9 @@ class UserController extends Controller
 
         $filterParams = [
             'name' => $request->has('name') ? $request->input('name') : "",
-            'username' => $request->has('username') ? $request->input('username') : 0,
+            'username' => $request->has('username') ? $request->input('username') : '',
             'email' => $request->has('email') ? $request->input('email') : "",
-            'type' => $request->has('type') ? $request->input('type') : 0,
+            'type' => $request->has('type') ? $request->input('type') : '',
             'isActive' => $request->has('isActive') ? $request->input('isActive') : "",
         ];
 
@@ -68,7 +68,8 @@ class UserController extends Controller
 
 
         return response()->success(compact(
-            'lists', 'filters', 'products', 'roles'));
+            'lists', 'filters', 'products', 'roles')
+        );
     }
 
     public function getUser(Request $request)
@@ -99,8 +100,10 @@ class UserController extends Controller
         $this->validate($request, $requiredData);
         $data = $request->all();
 
+
         if ($userId == 0) {
             $user = $this->createUser($data);
+
         } else {
             $user = User::find($userId);
             $user = $this->updateUser($user, $data);
@@ -108,5 +111,19 @@ class UserController extends Controller
         return response()->success(compact('user'));
     }
 
+    public function deleteUser(Request $request) {
+        $requiredData['id'] = 'required|exists:users,id';
+        $this->validate($request, $requiredData);
 
+        $authUser = Auth::user();
+        if (!$authUser->canDelete()) {
+            return response()->error('NO ACCESS');
+        }
+
+        $user = User::find($request->input('id'));
+        $user->is_active = false;
+        $user->save();
+
+        return response()->success('OK');
+    }
 }

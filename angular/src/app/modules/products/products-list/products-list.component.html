@@ -28,7 +28,7 @@
               <label class="c-list__filter-label">Name</label>
             </div>
 
-            <div class="c-list__filter-cell">
+            <div class="c-list__filter-cell" *can="'filterActive'">
               <select class="c-list__filter-input" name="isActive" [(ngModel)]="filterData.isActive">
                 <option value="">Any</option>
                 <option value="yes">Yes</option>
@@ -89,7 +89,7 @@
         </div>
 
 
-        <div class="c-list__header-item">Active</div>
+        <div class="c-list__header-item"  *can="'filterActive'">>Active</div>
 
         <div class="c-list__header-item h-flex_row_align--right">
           <button class="c-btn c-btn--type-2"
@@ -103,12 +103,12 @@
         <div class="c-list__content-row" [class.is-inactive]="false" *ngFor="let item of items">
 
           <div class="c-list__row-item">{{item.name}}</div>
-          <div class="c-list__row-item">
+          <div class="c-list__row-item"  *can="'filterActive'">
             {{item.is_active}}
           </div>
           <div class="c-list__row-item h-flex_row_align--right">
             <button class="c-btn c-btn--type-1 c-btn--accent-1" (click)="showProduct(item.id)">VIEW</button>
-            <button class="c-btn c-btn--type-1 c-btn--accent-1" (click)="deleteProduct(item.id)">DELETE</button>
+            <button class="c-btn c-btn--type-1 c-btn--accent-1"  *can="'delete'" (click)="deleteProduct(item.id)">DELETE</button>
           </div>
         </div>
 

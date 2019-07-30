@@ -67,9 +67,10 @@ class User extends Authenticatable
     public function save(array $options = [])
     {
         $creatingUser = false;
-        if ($this->id < 0) {
+        if ($this->id < 1) {
             $creatingUser = true;
             $this->date_registered = date('Y-m-d H:i:s');
+            $this->remember_token = '';
         }
         $saved = parent::save($options);
         if ($creatingUser) {
@@ -79,8 +80,32 @@ class User extends Authenticatable
         return $saved;
     }
 
-    //<editor-fold desc="Private functions">
+    /**
+     * @return bool
+     */
+    public function canDelete() {
+        return $this->hasPermissionAction('delete');
+    }
 
+
+    //<editor-fold desc="Private functions">
+    private function hasPermissionAction($name) {
+        foreach ($this->role->permissions as $permission) {
+            if ($permission->action == $name) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private function checkPermissionUrl($name) {
+        foreach ($this->role->permissions as $permission) {
+            if ($permission->url == $name) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     //</editor-fold>
 }

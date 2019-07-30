@@ -17,15 +17,15 @@ trait UserTrait
         $user->email = $data['email'];
         $user->username = $data['username'];
         $user->password = bcrypt($data['passwords']['password']);
-        $user->remember_token = "";
+
         $user->phone = $data['phone'];
         $user->cellphone = $data['cellphone'];
         $user->note = $data['note'];
-        // $user->status_professor = 0;
+
         $user->is_active = $data['is_active'] == "true" ? true : false;
 
 
-        $this->date_registered = date('Y-m-d H:i:s');
+
         $user->save();
 
         $message = "User created successfuly";
@@ -38,7 +38,7 @@ trait UserTrait
     /**
      * @param $student
      * @param $data
-     * @return Student
+     * @return User
      */
     public function updateUser($user, $data) {
 

@@ -43,11 +43,11 @@ class FilterCriteria extends Criteria {
     public function apply(Builder $model, RepositoryInterface $repository)
     {
         $model->where(function ($query) {
-            $query->where('clients.email', 'LIKE', '%' . $this->email . '%')
-                ->orWhere('clients.firstname', 'LIKE', '%' . $this->filterKey . '%')
+                $query->Where('clients.firstname', 'LIKE', '%' . $this->filterKey . '%')
                 ->orWhere('clients.lastname', 'LIKE', '%' . $this->filterKey . '%');
         });
 
+        $model->where('clients.email', 'LIKE', '%' . $this->email . '%');
 
 
         if ($this->isActive != '') {
@@ -68,6 +68,7 @@ class FilterCriteria extends Criteria {
 
         if ($user->role_id == Role::REGULAR) {
             $model->where('user_id', $user->id);
+            $model->where('is_active', 1);
         }
         return $model;
     }

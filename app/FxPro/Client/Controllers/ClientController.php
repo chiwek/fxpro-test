@@ -27,7 +27,7 @@ class ClientController extends Controller
     {
 
         $perPage = $request->has('perPage') ? $request->input('perPage') : 10;
-        $order = $request->has('order') ? $request->get('order') : 'users.firstname';
+        $order = $request->has('order') ? $request->get('order') : 'clients.firstname';
         $sort = $request->has('sort') ? $request->get('sort') : 'asc';
 
         $filterParams = [
@@ -55,6 +55,8 @@ class ClientController extends Controller
 
     public function getClient(Request $request)
     {
+        $requiredData['id'] = 'required|exists:clients,id';
+        $this->validate($request, $requiredData);
 
         $client = Client::find($request->input('id'));
 

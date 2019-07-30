@@ -34,6 +34,7 @@ class FilterCriteria extends Criteria {
      */
     public function apply(Builder $model, RepositoryInterface $repository)
     {
+
         $model->where(function ($query) {
             $query->where('users.email', 'LIKE', '%' . $this->filterKey . '%')
                 ->orWhere('users.firstname', 'LIKE', '%' . $this->filterKey . '%')
@@ -41,6 +42,7 @@ class FilterCriteria extends Criteria {
         });
 
         $model->where('users.username', 'LIKE', '%' . $this->username . '%');
+
 
         if ($this->isActive != '') {
             $model->where('users.is_active', "{$this->isActive}");
@@ -59,6 +61,8 @@ class FilterCriteria extends Criteria {
         } else {
             $model->orderBy($this->order, $this->sort);
         }
+
+
 
         return $model;
     }

@@ -43,7 +43,7 @@
                 <div class="c-frm__cell">
                     <div class="c-frm__field">
                         <select class="c-frm__input h-text-capitalize" formControlName="product">
-                            <option *ngFor="let product of products" value="{{product.id}}">{{product.name}}</option>
+                            <option *ngFor="let product of globals.products" value="{{product.id}}">{{product.name}}</option>
                         </select>
                         <label class="c-frm__label">PRODUCT</label>
                     </div>

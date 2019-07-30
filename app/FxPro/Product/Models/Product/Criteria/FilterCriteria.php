@@ -3,7 +3,9 @@ namespace App\FxPro\Product\Models\Product\Criteria;
 
 use App\FxPro\Core\Repositories\DB\Criteria;
 use App\FxPro\Core\Repositories\DB\RepositoryInterface;
+use App\FxPro\User\Models\Role\Role;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Auth;
 
 class FilterCriteria extends Criteria {
 
@@ -54,6 +56,12 @@ class FilterCriteria extends Criteria {
             }
         } else {
             $model->orderBy($this->order, $this->sort);
+        }
+
+        $user = Auth::user();
+
+        if ($user->role_id == Role::REGULAR) {
+            $model->where('is_active', 1);
         }
 
         return $model;

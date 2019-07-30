@@ -2,6 +2,10 @@
 namespace App\FxPro;
 
 
+use App\FxPro\Client\Models\Client\Client;
+use App\FxPro\Product\Models\Product\Product;
+use App\FxPro\User\Models\ActionLog\ActionLog;
+use App\FxPro\User\Models\User\User;
 use Illuminate\Queue\Events\JobProcessing;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
@@ -81,6 +85,42 @@ class BaseServiceProvider extends ServiceProvider
             view()->share('theViewName', $viewName);
         });
 
+        User::created(function($user) {
+            $this->makeActionLog('User', $user->id,'Create');
+        });
+
+        User::updated(function($user) {
+            $this->makeActionLog('User', $user->id,'Update');
+        });
+
+        User::deleted(function($user) {
+            $this->makeActionLog('User', $user->id,'Delete');
+        });
+
+        Client::created(function($client) {
+            $this->makeActionLog('Client', $client->id,'Create');
+        });
+
+        Client::updated(function($client) {
+            $this->makeActionLog('Client', $client->id,'Update');
+        });
+
+        Client::deleted(function($client) {
+            $this->makeActionLog('Client', $client->id,'Delete');
+        });
+
+        Product::created(function($product) {
+            $this->makeActionLog('Product', $product->id,'Create');
+        });
+
+        Product::updated(function($product) {
+            $this->makeActionLog('Product', $product->id,'Update');
+        });
+
+        Product::deleted(function($product) {
+            $this->makeActionLog('Product', $product->id,'Delete');
+        });
+
     }
 
     public function register() {
@@ -104,6 +144,17 @@ class BaseServiceProvider extends ServiceProvider
                 }
             }
         }
+    }
+
+
+    private function makeActionLog($resourceName, $resourceId, $action) {
+        ActionLog::create([
+            'user_id' => Auth::user()->id,
+            'resource_name' => $resourceName,
+            'resource_id' => $resourceId,
+            'action' => $action
+
+        ]);
     }
 
 }

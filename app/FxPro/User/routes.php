@@ -26,6 +26,11 @@ Route::group([
         'uses' => 'UserController@processForm',
     ])->name('user_process');
 
+    $router->post('api/users/delete', [
+        'middleware' => ['cors'],
+        'uses' => 'UserController@deleteUser',
+    ])->name('user_delete');
+
 
 
     $router->post('api/users/filter/delete', [

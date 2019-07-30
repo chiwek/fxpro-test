@@ -8,6 +8,7 @@ use App\FxPro\Product\Models\Product\ProductInterface;
 use App\FxPro\Product\Models\Product\ProductTrait;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 
 class ProductController extends Controller
@@ -84,5 +85,20 @@ class ProductController extends Controller
         return response()->success(compact('product'));
     }
 
+    public function deleteProduct(Request $request) {
+        $requiredData['id'] = 'required|exists:products,id';
+        $this->validate($request, $requiredData);
+
+        $authUser = Auth::user();
+        if (!$authUser->canDelete()) {
+            return response()->error('NO ACCESS');
+        }
+
+        $product = Product::find($request->input('id'));
+        $product->is_active = false;
+        $product->save();
+
+        return response()->success('OK');
+    }
 
 }

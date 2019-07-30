@@ -50,7 +50,7 @@ export class StaffViewComponent implements OnInit, OnDestroy {
     }
 
     public loadItem() {
-        this.api.call('get', 'user/get', {id: this.id}, this.itemLoaded.bind(this));
+        this.api.call('get', 'users/get', {id: this.id}, this.itemLoaded.bind(this));
     }
 
     private itemLoaded(data) {
