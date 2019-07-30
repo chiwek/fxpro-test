@@ -1,6 +1,15 @@
 
 # FxPro Test App
 
+## Structure
+
+Both front and backend are bundled into single repository
+
+All of Laravel Code is added into FxPro Namespace under App
+
+Angular is using routing, models, modules, services, and directives.
+
+
 ## DEMO
 
 You can see the app in action here:
@@ -58,7 +67,7 @@ if it's going to sit in a subfolder state it as base href parameter below
 Execute:
 > ng build --prod --base-href=/v1/
 
-Copy contents of dist folder to where you'll be serving the Frontend App and under Frontend URI
+Copy contents of dist/angular folder to where you'll be serving the Frontend App and under Frontend URI
 
 
 #### Shortcut

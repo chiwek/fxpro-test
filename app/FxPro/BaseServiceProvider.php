@@ -105,9 +105,7 @@ class BaseServiceProvider extends ServiceProvider
             $this->makeActionLog('Client', $client->id,'Update');
         });
 
-        Client::deleted(function($client) {
-            $this->makeActionLog('Client', $client->id,'Delete');
-        });
+
 
         Product::created(function($product) {
             $this->makeActionLog('Product', $product->id,'Create');
@@ -117,9 +115,7 @@ class BaseServiceProvider extends ServiceProvider
             $this->makeActionLog('Product', $product->id,'Update');
         });
 
-        Product::deleted(function($product) {
-            $this->makeActionLog('Product', $product->id,'Delete');
-        });
+
 
     }
 

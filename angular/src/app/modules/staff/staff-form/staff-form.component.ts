@@ -23,7 +23,7 @@ export class StaffFormComponent extends FormBaseComponent implements OnInit {
     private goToList = false;
 
     constructor(public route: ActivatedRoute, private api: ApiService, private _fb: FormBuilder,
-                private modal: ModalService, private toast: ToastService, private router: Router, private globals: GlobalService) {
+                private modal: ModalService, private toast: ToastService, private router: Router, public globals: GlobalService) {
         super(route);
         this.loadForm();
     }
