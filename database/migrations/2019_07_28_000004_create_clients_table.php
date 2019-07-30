@@ -24,6 +24,7 @@ class CreateClientsTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->unsignedInteger('user_id');
             $table->unsignedInteger('product_id')->nullable();
             $table->string('firstname', 45);
             $table->string('lastname', 45);
@@ -33,9 +34,15 @@ class CreateClientsTable extends Migration
             $table->text('note')->nullable();
             $table->boolean('is_active')->default('0');
 
+            $table->index(["user_id"], 'i_client_user');
             $table->index(["product_id"], 'i_client_product');
             $table->timestamps();
 
+
+            $table->foreign('user_id', 'fk_client_user')
+                ->references('id')->on('users')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
 
             $table->foreign('product_id', 'fk_client_product')
                 ->references('id')->on('products')

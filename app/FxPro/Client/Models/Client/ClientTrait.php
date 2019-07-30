@@ -2,6 +2,8 @@
 namespace App\FxPro\Client\Models\Client;
 
 
+use Illuminate\Support\Facades\Auth;
+
 trait ClientTrait
 {
 
@@ -21,6 +23,8 @@ trait ClientTrait
         $client->note = $data['note'];
         
         $client->is_active = $data['is_active'] == "true" ? true : false;
+
+        $client->user_id = Auth::user()->id;
 
         $client->save();
 

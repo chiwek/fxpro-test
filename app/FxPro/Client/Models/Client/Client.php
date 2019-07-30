@@ -5,6 +5,7 @@ namespace App\FxPro\Client\Models\Client;
 
 
 use App\FxPro\Product\Models\Product\Product;
+use App\FxPro\User\Models\User\User;
 use Illuminate\Database\Eloquent\Model;
 
 
@@ -29,6 +30,11 @@ class Client extends Model
     public function product()
     {
         return $this->belongsTo(Product::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
     //</editor-fold>
