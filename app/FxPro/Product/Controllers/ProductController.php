@@ -3,6 +3,7 @@
 namespace App\FxPro\Product\Controllers;
 
 
+use App\FxPro\Product\Models\Product\Product;
 use App\FxPro\Product\Models\Product\ProductInterface;
 use App\FxPro\Product\Models\Product\ProductTrait;
 use Illuminate\Http\Request;
@@ -64,20 +65,18 @@ class ProductController extends Controller
 
         $id = $request->input('id', 0);
         $requiredData = [
-            'firstname' => 'required',
-            'lastname' => 'required',
-            'email' => 'required'
+            'name' => 'required',
         ];
 
         if ($id > 0) {
-            $requiredData['id'] = 'required|exists:product,id';
+            $requiredData['id'] = 'required|exists:products,id';
         }
 
         $this->validate($request, $requiredData);
         $data = $request->all();
 
         if ($id == 0) {
-            $product = $this->createCProduct($data);
+            $product = $this->createProduct($data);
         } else {
             $product = Product::find($id);
             $product = $this->updateProduct($product, $data);

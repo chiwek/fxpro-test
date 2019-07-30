@@ -61,9 +61,7 @@ export class ClientsFormComponent extends FormBaseComponent implements OnInit {
     public loadForm() {
         this.frm = this._fb.group({
             'id': [this.client.id],
-            'product': [this.client.product_id, [
-                Validators.required
-            ]],
+            'product': [this.client.product_id],
             'firstname': [this.client.firstname, [
                 Validators.required
             ]],

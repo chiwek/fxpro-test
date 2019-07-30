@@ -39,7 +39,7 @@ class FilterCriteria extends Criteria {
     public function apply(Builder $model, RepositoryInterface $repository)
     {
         $model->where(function ($query) {
-            $query->where('products.name', 'LIKE', '%' . $this->email . '%');
+            $query->where('products.name', 'LIKE', '%' . $this->filterKey . '%');
         });
 
         if ($this->isActive != '') {

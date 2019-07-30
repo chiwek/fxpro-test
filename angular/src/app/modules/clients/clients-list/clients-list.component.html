@@ -134,7 +134,7 @@
         <div class="c-list__content-row" [class.is-inactive]="false" *ngFor="let item of items">
 
           <div class="c-list__row-item">{{item.firstname}} {{item.lastname}}</div>
-          <div class="c-list__row-item">{{item.product.name}}</div>
+          <div class="c-list__row-item">{{item.product?.name}}</div>
           <div class="c-list__row-item">{{item.email}}</div>
           <div class="c-list__row-item">
             {{item.is_active}}

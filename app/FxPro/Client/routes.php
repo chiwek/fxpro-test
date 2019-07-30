@@ -13,7 +13,7 @@ Route::group([
 
     $router->get('api/clients/get', [
         'middleware' => ['cors'],
-        'uses' => 'ClientController@getUser',
+        'uses' => 'ClientController@getClient',
     ])->name('client_get');
 
 

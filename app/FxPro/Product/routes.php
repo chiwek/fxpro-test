@@ -13,7 +13,7 @@ Route::group([
 
     $router->get('api/products/get', [
         'middleware' => ['cors'],
-        'uses' => 'ProductController@getUser',
+        'uses' => 'ProductController@getProduct',
     ])->name('product_get');
 
 

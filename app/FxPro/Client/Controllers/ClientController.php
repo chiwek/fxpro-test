@@ -3,11 +3,11 @@
 namespace App\FxPro\Client\Controllers;
 
 
+use App\FxPro\Client\Models\Client\Client;
 use App\FxPro\Client\Models\Client\ClientInterface;
 use App\FxPro\Client\Models\Client\ClientTrait;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller
 {
@@ -72,14 +72,14 @@ class ClientController extends Controller
         ];
 
         if ($id > 0) {
-            $requiredData['id'] = 'required|exists:client,id';
+            $requiredData['id'] = 'required|exists:clients,id';
         }
 
         $this->validate($request, $requiredData);
         $data = $request->all();
 
         if ($id == 0) {
-            $client = $this->createCClient($data);
+            $client = $this->createClient($data);
         } else {
             $client = Client::find($id);
             $client = $this->updateClient($client, $data);
