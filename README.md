@@ -16,7 +16,7 @@ Found some problems with the task definition itself, so msome things are probabl
 
 ###### Entities
 You say Client can be related to a product, and then ask for Administrator to see all clients with their products. 
-It's not clear is the client-product entities relation 1:1 or 1:N, I did 1:1, went the easier way ;)
+It's not clear is the client-product entities relation 1:1 or 1:N. I did 1:1, went the easier way ;)
 
 ###### Users
 You address User types as Administrator and Regular, but then say 'System Users' will be responsible to CRUD Clients and Products.
@@ -39,6 +39,10 @@ Action logs exist in this App, but only in the database. The functionality done 
 You can see the app in action here:
 
 http://fxpro.codebliss.biz/v1 
+
+Admin credentials:
+chiwek@gmail.com
+chiwek
 
 ## Deployment
 

@@ -47,11 +47,11 @@ export class LoginComponent implements OnInit {
         if (environment.production == false) {
 
         }
-
+        /*
         this.account.email = 'chiwek@gmail.com';
         this.account.password = 'm122eme14412';
         // this.loginUser();
-
+        */
         this.error = '';
 
 
