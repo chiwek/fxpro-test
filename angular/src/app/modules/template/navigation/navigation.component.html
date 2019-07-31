@@ -1,4 +1,4 @@
-<div class="c-navigation__item h-buttonize" (click)="hideNav()"
+<div class="c-navigation__item h-buttonize" (click)="hideNav()" *canUrl="'staff'"
      [ngClass]="{ 'is-active': template.show_activeNavigationTab === 'staff' }"
      routerLink="staff">
 

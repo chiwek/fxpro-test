@@ -13,6 +13,7 @@ import {PaginationComponent} from "./pagination/pagination.component";
 import {SidebarComponent} from './sidebar/sidebar.component';
 import {NavigationComponent} from './navigation/navigation.component';
 import {RouterModule} from "@angular/router";
+import {SharedModule} from "../../shared.module";
 
 @NgModule({
     declarations: [ToastComponent, LoginComponent, ConfirmComponent, OptionsComponent, LoadingComponent, ErrorComponent, PaginationComponent, SidebarComponent, NavigationComponent],
@@ -22,7 +23,8 @@ import {RouterModule} from "@angular/router";
         FormsModule,
         ReactiveFormsModule,
         InlineSVGModule,
-        RouterModule
+        RouterModule,
+        SharedModule
     ],
     exports: [
         ConfirmComponent,
