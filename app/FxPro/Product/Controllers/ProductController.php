@@ -6,6 +6,7 @@ namespace App\FxPro\Product\Controllers;
 use App\FxPro\Product\Models\Product\Product;
 use App\FxPro\Product\Models\Product\ProductInterface;
 use App\FxPro\Product\Models\Product\ProductTrait;
+use App\FxPro\User\Models\ActionLog\ActionLog;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -97,6 +98,13 @@ class ProductController extends Controller
         $product = Product::find($request->input('id'));
         $product->is_active = false;
         $product->save();
+
+        ActionLog::create([
+            'user_id' => Auth::user()->id,
+            'resource_name' => 'Product',
+            'resource_id' => $product->id,
+            'action' => 'Delete'
+        ]);
 
         return response()->success('OK');
     }

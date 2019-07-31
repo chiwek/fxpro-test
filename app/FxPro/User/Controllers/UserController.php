@@ -3,6 +3,7 @@
 namespace App\FxPro\User\Controllers;
 
 use App\FxPro\Product\Models\Product\Product;
+use App\FxPro\User\Models\ActionLog\ActionLog;
 use App\FxPro\User\Models\Role\Role;
 use App\FxPro\User\Models\User\User;
 use App\FxPro\User\Models\User\UserInterface;
@@ -124,6 +125,12 @@ class UserController extends Controller
         $user->is_active = false;
         $user->save();
 
+        ActionLog::create([
+            'user_id' => Auth::user()->id,
+            'resource_name' => 'User',
+            'resource_id' => $user->id,
+            'action' => 'Delete'
+        ]);
         return response()->success('OK');
     }
 }

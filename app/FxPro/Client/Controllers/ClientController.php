@@ -6,6 +6,7 @@ namespace App\FxPro\Client\Controllers;
 use App\FxPro\Client\Models\Client\Client;
 use App\FxPro\Client\Models\Client\ClientInterface;
 use App\FxPro\Client\Models\Client\ClientTrait;
+use App\FxPro\User\Models\ActionLog\ActionLog;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -102,6 +103,13 @@ class ClientController extends Controller
         $client = Client::find($request->input('id'));
         $client->is_active = false;
         $client->save();
+
+        ActionLog::create([
+            'user_id' => Auth::user()->id,
+            'resource_name' => 'Client',
+            'resource_id' => $client->id,
+            'action' => 'Delete'
+        ]);
 
         return response()->success('OK');
     }

@@ -23,10 +23,14 @@ You address User types as Administrator and Regular, but then say 'System Users'
 Which type are system users? I simply discarded this as a rhetorical statement. 
 
 
+###### Clients
+It was not clear whether or not Regular Users should see all Clients or only the ones they Created.
+I've done the latter, Regular users can see clients they have created only. 
+
 ###### Action Logs
 I did not build UI to display Action Logs, but I have started the backend.
 
-Action logs exist in this App, but only in the database. The functionality done is only for Create/Update as Delete is a bit complicated due to records not really being deleted. I didn't like adding code directly to controllers for it, and building a wrapper would be out of scope as it would push me out of the deadline to give the test in.
+Action logs exist in this App, but only in the database. The functionality done is for Create/Update/Delete.
 
  
     
