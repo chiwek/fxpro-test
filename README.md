@@ -10,6 +10,26 @@ All of Laravel Code is added into FxPro Namespace under App
 Angular is using routing, models, modules, services, and directives.
 
 
+## ISSUES
+
+Found some problems with the task definition itself, so msome things are probably not done as you intended them.
+
+###### Entities
+You say Client can be related to a product, and then ask for Administrator to see all clients with their products. 
+It's not clear is the client-product entities relation 1:1 or 1:N, I did 1:1, went the easier way ;)
+
+###### Users
+You address User types as Administrator and Regular, but then say 'System Users' will be responsible to CRUD Clients and Products.
+Which type are system users? I simply discarded this as a rhetorical statement. 
+
+
+###### Action Logs
+I did not build UI to display Action Logs, but I have started the backend.
+
+Action logs exist in this App, but only in the database. The functionality done is only for Create/Update as Delete is a bit complicated due to records not really being deleted. I didn't like adding code directly to controllers for it, and building a wrapper would be out of scope as it would push me out of the deadline to give the test in.
+
+ 
+    
 ## DEMO
 
 You can see the app in action here:

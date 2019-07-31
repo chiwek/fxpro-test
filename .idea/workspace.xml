@@ -3,6 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="f565aef1-17ae-407a-9e2c-dd79f4fccfe7" name="Default" comment="frontend build">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/v1/3rdpartylicenses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/v1/5.085ac1718fefaa2681ea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/v1/6.98749fab109771e19879.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/v1/7.e622e7f941a92a763baa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/v1/common.07e1aa0b436e0d312cd9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/v1/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/v1/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/v1/main.631313fb8aec96ef44b6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/v1/polyfills.2a7ce705ea338242691c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/v1/runtime.8c5192245c3ed9fabf06.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/v1/styles.82b187c4b19ad168e46e.css" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,18 +42,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1305">
               <caret line="127" selection-start-line="127" selection-end-line="127" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseServiceProvider.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/FxPro/BaseServiceProvider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="117" selection-start-line="117" selection-end-line="117" />
-              <folding>
-                <element signature="e#29#71#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -74,6 +74,23 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-843">
+                <caret line="28" selection-start-line="28" selection-end-line="28" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/dist/angular/index.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="3rdpartylicenses.txt" pinned="false" current-in-tab="true">
@@ -172,10 +189,10 @@
         <option value="$PROJECT_DIR$/angular/src/app/modules/products/products-list/products-list.component.html" />
         <option value="$PROJECT_DIR$/angular/src/app/modules/clients/clients-form/clients-form.component.ts" />
         <option value="$PROJECT_DIR$/angular/src/app/modules/staff/staff-form/staff-form.component.ts" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/FxPro/BaseServiceProvider.php" />
         <option value="$PROJECT_DIR$/angular/src/app/modules/template/navigation/navigation.component.html" />
         <option value="$PROJECT_DIR$/angular/src/app/modules/template/template.module.ts" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -597,7 +614,7 @@
       <updated>1564323946054</updated>
       <workItem from="1564323947530" duration="10348000" />
       <workItem from="1564383927914" duration="13063000" />
-      <workItem from="1564414668623" duration="21558000" />
+      <workItem from="1564414668623" duration="22952000" />
     </task>
     <task id="LOCAL-00001" summary="environment">
       <created>1564334142562</created>
@@ -753,11 +770,25 @@
       <option name="project" value="LOCAL" />
       <updated>1564552349686</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="frontend build">
+      <created>1564552593773</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1564552593773</updated>
+    </task>
+    <task id="LOCAL-00024" summary="frontend build">
+      <created>1564552881176</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1564552881176</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44969000" />
+    <option name="totallyTimeSpent" value="46363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -823,26 +854,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/angular/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/shared.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/src/app/modules/products/products.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1150,16 +1161,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="194">
-            <caret line="69" selection-start-line="69" selection-end-line="69" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/FxPro/BaseServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1201,6 +1202,12 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/v1/assets/svg/main/more_16.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/v1/5.085ac1718fefaa2681ea.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/angular/src/app/modules/template/template.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1211,8 +1218,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/v1/assets/svg/main/more_16.svg">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-843">
+            <caret line="28" selection-start-line="28" selection-end-line="28" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/dist/angular/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public/v1/3rdpartylicenses.txt">
       <provider selected="true" editor-type-id="text-editor" />
