@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f565aef1-17ae-407a-9e2c-dd79f4fccfe7" name="Default" comment="">
+    <list default="true" id="f565aef1-17ae-407a-9e2c-dd79f4fccfe7" name="Default" comment="frontend build">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular/src/app/modules/clients/clients-form/clients-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular/src/app/modules/clients/clients-form/clients-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular/src/app/modules/products/products-list/products-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular/src/app/modules/products/products-list/products-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular/src/app/modules/staff/staff-form/staff-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular/src/app/modules/staff/staff-form/staff-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/FxPro/BaseServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/FxPro/BaseServiceProvider.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,27 +34,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/FxPro/User/Controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="65" column="55" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
-              <folding>
-                <element signature="e#46#91#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products-list.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/src/app/modules/products/products-list/products-list.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="91" column="64" selection-start-line="91" selection-start-column="64" selection-end-line="91" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BaseServiceProvider.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/FxPro/BaseServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -81,20 +55,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/v1/.htaccess">
+      <file leaf-file-name="navigation.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/src/app/modules/template/navigation/navigation.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state>
+              <caret column="80" selection-start-column="80" selection-end-column="80" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="staff-form.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular/src/app/modules/staff/staff-form/staff-form.component.html">
+      <file leaf-file-name="template.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/src/app/modules/template/template.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="45" column="64" selection-start-line="45" selection-start-column="64" selection-end-line="45" selection-end-column="64" />
+            <state relative-caret-position="272">
+              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="3rdpartylicenses.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/v1/3rdpartylicenses.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/v1/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -134,8 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/angular/src/app/modules/template/navigation/navigation.component.html" />
-        <option value="$PROJECT_DIR$/angular/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/config/fxpro.php" />
         <option value="$PROJECT_DIR$/angular/src/app/modules/products/products-view/products-view.component.html" />
         <option value="$PROJECT_DIR$/angular/src/app/models/product.ts" />
@@ -185,6 +174,8 @@
         <option value="$PROJECT_DIR$/angular/src/app/modules/staff/staff-form/staff-form.component.ts" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/FxPro/BaseServiceProvider.php" />
+        <option value="$PROJECT_DIR$/angular/src/app/modules/template/navigation/navigation.component.html" />
+        <option value="$PROJECT_DIR$/angular/src/app/modules/template/template.module.ts" />
       </list>
     </option>
   </component>
@@ -367,7 +358,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="clients" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fxpro-test" type="b2602c69:ProjectViewProjectNode" />
@@ -376,37 +367,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="clients" type="462c0819:PsiDirectoryNode" />
-              <item name="clients-form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fxpro-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fxpro-test" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="clients" type="462c0819:PsiDirectoryNode" />
-              <item name="clients-view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fxpro-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fxpro-test" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="staff" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fxpro-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fxpro-test" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="staff" type="462c0819:PsiDirectoryNode" />
-              <item name="staff-form" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fxpro-test" type="b2602c69:ProjectViewProjectNode" />
@@ -605,10 +567,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\wamp\www\fxpro-test\public\v1" />
+      <recent name="D:\wamp\www\fxpro-test\angular\dist\angular" />
       <recent name="D:\wamp\www\fxpro-test\app\FxPro\User\Models\ActionLog" />
       <recent name="D:\wamp\www\fxpro-test\angular\src\app\models" />
       <recent name="D:\wamp\www\fxpro-test\angular\src\app\modules\products" />
-      <recent name="D:\wamp\www\fxpro-test\angular\src\app\modules\clients" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -635,7 +597,7 @@
       <updated>1564323946054</updated>
       <workItem from="1564323947530" duration="10348000" />
       <workItem from="1564383927914" duration="13063000" />
-      <workItem from="1564414668623" duration="19594000" />
+      <workItem from="1564414668623" duration="21558000" />
     </task>
     <task id="LOCAL-00001" summary="environment">
       <created>1564334142562</created>
@@ -777,11 +739,25 @@
       <option name="project" value="LOCAL" />
       <updated>1564506014496</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="action logs&#10;frontend build">
+      <created>1564506881455</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1564506881455</updated>
+    </task>
+    <task id="LOCAL-00022" summary="frontend build">
+      <created>1564552349686</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1564552349686</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43005000" />
+    <option name="totallyTimeSpent" value="44969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -831,7 +807,9 @@
     <MESSAGE value="globals&#10;db schema" />
     <MESSAGE value="added delete" />
     <MESSAGE value="action logs" />
-    <option name="LAST_COMMIT_MESSAGE" value="action logs" />
+    <MESSAGE value="action logs&#10;frontend build" />
+    <MESSAGE value="frontend build" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend build" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -845,30 +823,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/deploy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/logging.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/modules/staff/staff.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
@@ -1216,9 +1170,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/v1/assets/svg/main/more_16.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/src/app/modules/staff/staff-form/staff-form.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -1239,9 +1190,32 @@
     <entry file="file://$PROJECT_DIR$/public/v1/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/modules/template/navigation/navigation.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="80" selection-start-column="80" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/modules/template/template.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/v1/assets/svg/main/more_16.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/v1/3rdpartylicenses.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
