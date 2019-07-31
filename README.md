@@ -11,6 +11,8 @@ Angular is using routing, models, modules, services, and directives.
 
 For each entity, there's a filterable and sortable list, a view page (from which you go to edit or back, look at the top right of the page), and a create/edit form page.
 
+Database scheme picture and MySQL Workbench file exists in the database folder
+
 ## ISSUES
 
 Found some problems with the task definition itself, so msome things are probably not done as you intended them.
