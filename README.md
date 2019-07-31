@@ -9,6 +9,7 @@ All of Laravel Code is added into FxPro Namespace under App
 
 Angular is using routing, models, modules, services, and directives.
 
+For each entity, there's a filterable and sortable list, a view page (from which you go to edit or back, look at the top right of the page), and a create/edit form page.
 
 ## ISSUES
 
